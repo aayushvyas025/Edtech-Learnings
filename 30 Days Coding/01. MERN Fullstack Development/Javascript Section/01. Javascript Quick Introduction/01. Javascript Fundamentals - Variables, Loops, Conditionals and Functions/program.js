@@ -182,3 +182,117 @@ switch (day) {
   default:
     console.log("Please enter the valid 7 days name of the week");
 }
+
+//? Loops 
+// - Loops are the fundamentals of the programming which helps to perform looping operations for a specific condition. 
+// - Loops follow the DRY "Don't Repeat Yourself" Principal
+
+//* In javascript we have multiple types of loop to iterate over the data type and operations 
+
+/** 
+ * * For loop  
+ * When you know how many times you have to perform repetitive work. 
+ * ? Syntax of for loop 
+ *  for(looping-variable; loop-condition; looping-variable-updation) {  
+ *     logic of for-loop 
+ * }
+ */
+
+for(let i = 1; i <= 5; i++) {
+    console.log(`Count: ${i}`);
+} 
+/** 
+ * Output: 
+ * Count: 1 
+ * Count: 2 
+ * Count: 3
+ * Count: 4
+ * Count: 5
+ */
+
+/** 
+ * * While loop 
+ * when you repeat until a condition becomes false 
+ * ? Syntax of while loop 
+ *  looping_variable 
+ *  while(condition)  { 
+ *    logic of loop  
+ *    updation_looping_variable 
+ * }
+ */ 
+
+let counterOne = 1; 
+while(counterOne <= 5)  {
+    console.log(`Count: ${counterOne}`); 
+    counterOne++; 
+}
+/** 
+ * Counter: 1 
+ * Counter: 2 
+ * Counter: 3 
+ * Counter: 4
+ * Counter: 5
+ */
+
+/** 
+ * * Do-while loop 
+ *  this loop is same like while but, it's a exit condition loop  
+ *  Default it's iterate single time if the condition becomes false also. 
+ */ 
+
+let counterTwo = 0; 
+do {
+    console.log(`Count: ${counterTwo}`); 
+    counterTwo++; 
+} while(counterTwo <= 5); 
+
+/** 
+ * Output: 
+ * Count: 1 
+ * Count: 2 
+ * Count: 3 
+ * Count: 4 
+ * Count: 5 
+ */
+
+
+/** 
+ * * for of loops 
+ * Great for looping through arrays 
+ * ? Syntax of for-of 
+ * for(let items of array)  {  
+ *   logic of for-of 
+ * }
+ */ 
+
+const fruits = ["Apple", "Banana", "Mango"];
+for(let fruit of fruits)  {
+    console.log(fruit); 
+} 
+/** 
+ * Output: 
+ * Apple 
+ * Banana 
+ * Mango
+ */
+
+/** 
+ * * for-in loop 
+ * This loop is mainly implement for objects only, with that we can iterate over the keys of object. 
+ * ? Syntax of for-in loop 
+ * for(let keys in object)  {  
+ *   logic of for-in loops 
+ * }
+ */ 
+
+let user = {firstname:"Aayush", lastname:"Vyas", age:27 }; 
+
+for(let info in user) {
+    console.log(`${info}: ${user[info]}`);
+}
+
+/** 
+ * firstname: Aayush 
+ * lastname: Vyas 
+ * age:27 
+ */
