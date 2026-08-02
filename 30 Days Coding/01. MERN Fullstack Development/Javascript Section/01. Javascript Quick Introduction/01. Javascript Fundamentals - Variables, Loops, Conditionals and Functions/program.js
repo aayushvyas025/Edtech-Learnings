@@ -117,7 +117,7 @@ if (temperature > 35) {
 let userAge = 27;
 // case
 userAge = 16;
-const isAdult = userAge >= 0 && userAge >= 18 ? "Adult" : "Not adult";
+const isAdult = userAge >= 0 && userAge >= 18 ? "Adult" : "Minor";
 //* Here we use Conditional AND operator "&&" in which all the condition should be true otherwise it give false
 console.log(isAdult);
 
@@ -296,3 +296,120 @@ for(let info in user) {
  * lastname: Vyas 
  * age:27 
  */
+
+//? Functions 
+// - Functions is a block of code designed to perform a specific task. You define it once and can call (run) it a multiple times as you want. 
+
+/** 
+ * * Function have two important components 
+ * 
+ * ? function declaration 
+ *  In this function declaration we declare the function and it's body.  
+ * * Syntax of function declaration 
+ *  function <function-name/function-identifier>()  {  
+ *     function body 
+ * }
+ * we create function with the help of function keyword and denote with parentheses () 
+ * 
+ * ? function calling 
+ * we used function calling for execution of function 
+ * * Syntax of function calling  
+ *  <function-name>()   
+ */ 
+
+//* example of function 
+
+/** 
+ * 
+ * function greet() {
+ *   console.log(`Hello there!, How are you`);
+ *  } 
+ * 
+*/
+
+// greet(); // Output: Hello there!, How are you  
+
+//* Parameter and Arguments 
+// - This parameter and arguments are inputs given to the functions which are local and its' execution context utpto function only.
+// - parameter are placeholder which passed to the function during the function declaration 
+// - arguments are the real values which we pass at the time of function calling.  
+
+function greet(name="John doe") {
+    // we can pass the default parameter value also "John doe"
+
+    console.log(`Hello there!, How are you ${name}`); // here name is parameter 
+}
+
+greet(`Aayush`);  // Here, 'Aayush' is arguments 
+greet(`Saijal`); 
+greet() // Here we are not passing argument   
+
+
+//* Return Values 
+/** 
+ * often you want a function gives a back a result instead of just printing it. That's what `return` does
+ */
+
+function addition(numOne, numTwo) {
+    return numOne + numTwo; 
+}
+
+// Here we are saving function return value 
+const sumResult = addition(5, 10); 
+console.log(sumResult);  // Output: 15  
+
+
+// another example 
+function checkAge(age) {
+    if(age >= 0 && age >=18) {
+        return 'Adult';
+    }else {
+        return 'Minor';
+    }
+}
+
+const resultCheckAge = checkAge(27); 
+console.log(resultCheckAge); // Output: Adult 
+
+//* Different ways to write the function 
+
+// 1. function declaration 
+// In function declaration, we use function keyword to declare function 
+function multiply(numOne, numTwo) {
+  return numOne * numTwo; 
+}
+
+const resultOne = multiply(5, 4);  
+console.log(resultOne);  // Output : 20  
+
+// 2. function expression 
+// In this function expression we store function in a variable 
+const multiplyTwo = function(numOne, numTwo) {
+  return numOne * numTwo; 
+} 
+
+const resultTwo = multiplyTwo(6, 10); 
+console.log(resultTwo); // Output: 60  
+
+// 3. Arrow function 
+// - arrow function is syntactical syntax of function, where we use fat arrow `=>` to create function 
+// - this arrow function is introduced in ES06 and in modern javascript we used mostly arrow function 
+
+const multiplyThree = (numOne, numTwo) => numOne * numTwo 
+//* Here the advantage is when the code in one line than we don't need to use curly braces { } or  return statement function implicitly return. 
+
+const resultThree = multiplyThree(5, 5); 
+console.log(resultThree); // Output: 25 
+
+
+
+
+
+
+
+
+
+
+
+
+
