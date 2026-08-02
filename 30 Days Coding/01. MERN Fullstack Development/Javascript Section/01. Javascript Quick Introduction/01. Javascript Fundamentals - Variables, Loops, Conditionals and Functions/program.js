@@ -59,38 +59,126 @@ const users = { name: "Aayush", age: 27 }; // object data type
 // conditional statements like if, if-else, else which helps to create conditional logic flow.
 
 //* Example of conditionals
-let temperature = 30; 
-// case one 
-temperature = 36; 
-// case two 
-temperature = 19; 
+let temperature = 30;
+// case one
+temperature = 36;
+// case two
+temperature = 19;
 
 if (temperature > 35) {
   /**
-   * this is `if statement`, which helps to create single condition flow 
-   * When if condition becomes `true` than we enter it's if-block and execute the if-block logic. 
-   * ? Syntax of if statement 
-   * if(<if-condition>)  {  
-   *   if-statement logic 
+   * this is `if statement`, which helps to create single condition flow
+   * When if condition becomes `true` than we enter it's if-block and execute the if-block logic.
+   * ? Syntax of if statement
+   * if(<if-condition>)  {
+   *   if-statement logic
    * }
    */
   console.log(`It's really hot!`);
 } else if (temperature > 20) {
-    /** 
-     * This is `else if statement`, which helps to create multiple conditions flow  
-     * When else if condition becomes `true` than we enter it's else-if block and execute the else-if block logic. 
-     * ? Syntax of else if statement 
-     * else if(<else-if condition>) {  
-     *  else if statement    
-     * }
-     */
+  /**
+   * This is `else if statement`, which helps to create multiple conditions flow
+   * When else if condition becomes `true` than we enter it's else-if block and execute the else-if block logic.
+   * ? Syntax of else if statement
+   * else if(<else-if condition>) {
+   *  else if statement
+   * }
+   */
   console.log(`Nice weather`);
 } else {
-    /** 
-     * This is `else statement`,  which is secondary statement it's execute only when if, else-if statement condition becomes false 
-     * We use else statement with if, else-if only to create flow of our conditionals, not separately otherwise it give error to us. 
-     */
+  /**
+   * This is `else statement`,  which is secondary statement it's execute only when if, else-if statement condition becomes false
+   * We use else statement with if, else-if only to create flow of our conditionals, not separately otherwise it give error to us.
+   */
   console.log(`It's a cold!`);
 }
 
+/**
+ * ? Comparison operators
+ * Mainly we used to types of operators in conditionals because it gives boolean value.
+ *  1. Comparison operators
+ *  2. Logical operators
+ * Some comparison operators
+ *  `===` , `==`  this are equality operator `===` checks both type and value of data `==` check the value of data
+ *   `!==`, `!=`  Not equality operator checks both `!==` this one check both type and data and `!=` checks only value.
+ *   `>` greater than, `<` smaller than, `>=` greater than equal,  `<=` smaller than equal
+ */
 
+//* Ternary Operator
+// - Ternary operator is the syntactical syntax of if-else which we used for single condition only.
+// - We can use ternary operator for multiple conditions also but preferred to use for single condition.
+
+/**
+ * ? Syntax of Ternary Operator
+ * <Condition> ? 'Execution of logic when condition becomes true' : 'Execution when condition becomes false'
+ * It's similar like if-else but using `?` and `:` operator
+ */
+
+let userAge = 27;
+// case
+userAge = 16;
+const isAdult = userAge >= 0 && userAge >= 18 ? "Adult" : "Not adult";
+//* Here we use Conditional AND operator "&&" in which all the condition should be true otherwise it give false
+console.log(isAdult);
+
+//* Switch Statement
+// - Switch statement is also used for conditional flow
+// - Switch statement is used to check the condition against the provided variable to it's parentheses and matches condition in the switch block
+// - Switch statement is more cleaner and organize way to handle conditional flow statements
+
+/**
+ * ? Syntax of switch statement
+ *  switch(variable)  {
+ *   case 0:
+ *      logic of case;
+ *      break;   //! important because default switch statement execute all the cases
+ *
+ *  case 1:
+ *     logic of case;
+ *     break ;
+ *
+ *  case 2:
+ *     logic of case;
+ *      break ;
+ *
+ * * Here we have default case also which execute when all the cases are not match.
+ *   default:
+ *      logic of case;
+ * }
+ */
+
+// Example switch statement
+let day = "Sunday";
+
+switch (day) {
+  case "Monday":
+    console.log("It's first day of the week");
+    break;
+
+  case "Tuesday":
+    console.log("It's second day of the week");
+    break;
+
+  case "Wednesday":
+    console.log("It's third day of the week");
+    break;
+
+  case "Thursday":
+    console.log("It's fourth day of the week");
+    break;
+
+  case "Friday":
+    console.log("It's Fifth day of the week");
+    break;
+
+  case "Saturday":
+    console.log("It's Sixth day of the week");
+    break;
+
+  case "Sunday":
+    console.log("It's Seventh day of the week");
+    break;
+
+  default:
+    console.log("Please enter the valid 7 days name of the week");
+}
