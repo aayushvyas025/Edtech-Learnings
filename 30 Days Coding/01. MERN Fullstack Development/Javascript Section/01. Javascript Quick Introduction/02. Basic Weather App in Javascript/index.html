@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="app">
+      <div class="eyebrow">Weather</div>
+      <h1>What's it like out there ?</h1>
+      <form id="searchForm">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Search a city..."
+          autocomplete="off"
+        />
+        <button type="submit" id="searchBtn">Search</button>
+      </form>
+      <div class="card">
+        <div class="status" id="status">Try, New York, Tokyo, or your City</div>
+        <div class="current" id="current">
+          <div class="current-top">
+            <div>
+              <div class="place" id="place">-</div>
+              <div class="sub-place" id="subPlace">-</div>
+            </div>
+          </div>
+        </div>
+        <div class="temp-row">
+          <div class="icon" id="icon">☀️</div>
+          <div class="icon" id="icon">—°</div>
+        </div>
+        <div class="condition" id="condition">-</div>
+        <div class="stats">
+          <div>
+            <div class="stat-label">Feel like</div>
+            <div class="stat-value" id="feelLike">-</div>
+          </div>
+          <div>
+            <div class="stat-label">Humidity</div>
+            <div class="stat-value" id="humidity">-</div>
+          </div>
+          <div>
+            <div class="stat-label">Wind</div>
+            <div class="stat-value" id="wind">-</div>
+          </div>
+        </div>
+        <div class="forecast" id="forecast"></div>
+      </div>
+    </div>
+  </body>
+</html>
