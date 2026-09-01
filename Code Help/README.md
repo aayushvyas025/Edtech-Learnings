@@ -1,2 +1,2 @@
-# Codehelp 
-All the learning with source code from code-help platform
+# Code-help 
+This directory contains all learning with source code from code-help platform
