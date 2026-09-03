@@ -1,15 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Various way to include js file</title>
-    <!--* We can add the javascript in our head tag and write javascript with the help of script tag --> 
+    <!--* We can add the javascript in our head tag and write javascript with the help of script tag -->
     <script>
-        
+      console.log("Hello from HTML Document");
+      // - But here flaw, is that Javascript block HTML document to render because it's nature is blocking  so it's block html upto js executed completely.
+      // - To use javascript in head tag we have to use attribute so first html load than js start running and executing
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Include various way to add javascript in our file</h1>
-</body>
+    <!--* We can use javascript inline also to html elements -->
+    <button onclick="alert('Opening the alert dialog box')">Click on Me</button>
+
+    <!--! Best way to add Javascript at the last when all the HTML element rendered -->
+    <script>
+      console.log("Hello from body tag"); // Adding script at the last in our body tag is best practice which allows to render all html elements.
+    </script>
+    <!--* We can add the external javascript also with src attribute -->
+    <script src="script.js"></script>
+  </body>
 </html>
