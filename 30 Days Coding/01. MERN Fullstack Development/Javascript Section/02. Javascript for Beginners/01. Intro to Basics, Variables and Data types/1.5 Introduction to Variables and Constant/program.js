@@ -169,4 +169,6 @@ console.log(declaredVariable); // Output: undefined
 let initializedVariable = 'Aayush'; 
 console.log(initializedVariable); 
 
+//! In Modern Javascript let & const keywords are best and prefer as best practice to create variable bug free and avoid var keyword for variable creation
+
 
