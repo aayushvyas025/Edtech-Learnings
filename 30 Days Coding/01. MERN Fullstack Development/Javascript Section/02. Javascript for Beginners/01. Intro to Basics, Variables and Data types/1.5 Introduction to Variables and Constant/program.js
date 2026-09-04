@@ -147,3 +147,26 @@ const PI_VALUE = 3.14;
  */
  
 
+//?  Initialization and Declaration of Variables  
+
+/** 
+ * * Declaration of variable 
+ *  When we only create value but don't assign value than it's know as declaration of variable  
+ */  
+
+let declaredVariable ;  
+console.log(declaredVariable); // Output: undefined 
+/** 
+ * * This is the example of declared variable not assign the value to it.
+ * * When we console variable than it give undefined as output which also a datatype in js 
+ */
+
+/** 
+ * * Initialization of Variable 
+ * When we create variable and assign the value than it's know as initialization of variable 
+ */ 
+
+let initializedVariable = 'Aayush'; 
+console.log(initializedVariable); 
+
+
