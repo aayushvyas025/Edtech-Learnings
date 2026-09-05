@@ -171,92 +171,154 @@ smallerThanEqualCompOp = numFour <= numFive; // 25 <= 30, here smaller than cond
 console.log(smallerThanEqualCompOp); // Output: true
 
 /**
- * ! In Javascript Equality and Not-Equality operator are of two types 
- * Let explore equality * not-equality comparison operator 
+ * ! In Javascript Equality and Not-Equality operator are of two types
+ * Let explore equality * not-equality comparison operator
  */
 
-// Equality comparison operator 
+// Equality comparison operator
 /**
- * - Equality operator checks if two or more than operands are equal to each other or not. 
- * - Equality operator are of two types 
- *    1. Loose equality operator : this loose equality operator checks value of operands than return boolean value  
- *    2. Strict equality operator: this strict equality operator checks both type and value of operands than return boolean value 
- */ 
+ * - Equality operator checks if two or more than operands are equal to each other or not.
+ * - Equality operator are of two types
+ *    1. Loose equality operator : this loose equality operator checks value of operands than return boolean value
+ *    2. Strict equality operator: this strict equality operator checks both type and value of operands than return boolean value
+ */
 
-// Example of Loose equality operator 
-let looseEqualityCompOp = numThree == numFour; // 25 == 25 
-/** 
+// Example of Loose equality operator
+let looseEqualityCompOp = numThree == numFour; // 25 == 25
+/**
  * for loose equality operator we use double assignment operator "=="
  */
-console.log(looseEqualityCompOp); // Output: true  
-looseEqualityCompOp = numFive == numFour; // 30 == 25; 
-console.log(looseEqualityCompOp); // Output: false 
+console.log(looseEqualityCompOp); // Output: true
+looseEqualityCompOp = numFive == numFour; // 30 == 25;
+console.log(looseEqualityCompOp); // Output: false
 
 // string type case
 looseEqualityCompOp = numFour == numSix; // 25 == '25'
-/** 
- *! Here in above we use two different type 25 as number and 25 as numeric-string but we know that loose-equality only compare with number only so it return true boolean value.    
- */ 
+/**
+ *! Here in above we use two different type 25 as number and 25 as numeric-string but we know that loose-equality only compare with number only so it return true boolean value.
+ */
 
- console.log(looseEqualityCompOp); // Output: true 
+console.log(looseEqualityCompOp); // Output: true
 
-// example of strict equality operator 
+// example of strict equality operator
 let strictEqualityCompOp = numThree === numFour; // 25 === 25, here both type and value are check
-/** 
- * for strict-equality operator we use triple assignment operator === 
+/**
+ * for strict-equality operator we use triple assignment operator ===
  */
-console.log(strictEqualityCompOp); // Output: true 
+console.log(strictEqualityCompOp); // Output: true
 
 // string type case
-strictEqualityCompOp = numSix === numFour; // '25' === 25 
-console.log(strictEqualityCompOp); // Output: false 
+strictEqualityCompOp = numSix === numFour; // '25' === 25
+console.log(strictEqualityCompOp); // Output: false
 /**
- * Here, 25 as string and 25 as number and we compare with strict equality operator than it returns false because of different data type. 
+ * Here, 25 as string and 25 as number and we compare with strict equality operator than it returns false because of different data type.
  */
 
-
-// NotEquality Comparison Operator  
-/** 
- * - Not-equality comparison operator checks not equality between two or more than operands 
- * - Not-equality operator are of two types 
- *    1. Loose not-equality operator : Loose not-equality operator check only value of operands 
- *    2. Strict not-equality operator : Strict not-equality operator check both value and type of operands 
- *  
- */ 
-
-// Loose Equality operator 
-let looseNotEqualityCompOp = numThree != numFive; // 25 != 30 
+// NotEquality Comparison Operator
 /**
- * for loose-equality operator we use exclamation mark + assignment operator '!=' 
+ * - Not-equality comparison operator checks not equality between two or more than operands
+ * - Not-equality operator are of two types
+ *    1. Loose not-equality operator : Loose not-equality operator check only value of operands
+ *    2. Strict not-equality operator : Strict not-equality operator check both value and type of operands
+ *
  */
-console.log(looseNotEqualityCompOp); 
 
-looseNotEqualityCompOp = numThree != numFour; // 25 !=25 
-console.log(looseNotEqualityCompOp);  // output: false 
+// Loose Equality operator
+let looseNotEqualityCompOp = numThree != numFive; // 25 != 30
+/**
+ * for loose-equality operator we use exclamation mark + assignment operator '!='
+ */
+console.log(looseNotEqualityCompOp);
 
-looseNotEqualityCompOp = numThree != numFive; // 25 != 30 
-console.log(looseNotEqualityCompOp) // Output: true 
+looseNotEqualityCompOp = numThree != numFour; // 25 !=25
+console.log(looseNotEqualityCompOp); // output: false
+
+looseNotEqualityCompOp = numThree != numFive; // 25 != 30
+console.log(looseNotEqualityCompOp); // Output: true
 
 // string type case
-looseNotEqualityCompOp = numThree !=numSix; // 25 != '25'
+looseNotEqualityCompOp = numThree != numSix; // 25 != '25'
 /**
- * It here only value of operands are compare 
- */ 
-console.log(looseNotEqualityCompOp); // Output: false 
+ * It here only value of operands are compare
+ */
+console.log(looseNotEqualityCompOp); // Output: false
 
-// example of strict Not-equality operator 
-let strictNotEqualityCompOp = numThree !== numFour; // 25 !== 25 
+// example of strict Not-equality operator
+let strictNotEqualityCompOp = numThree !== numFour; // 25 !== 25
 /**
- * for strict not-equality operator we use exclamation symbol + double assignment operator  
+ * for strict not-equality operator we use exclamation symbol + double assignment operator
  */
-console.log(strictNotEqualityCompOp); // Output: false 
+console.log(strictNotEqualityCompOp); // Output: false
 
-strictNotEqualityCompOp = numThree !== numFive; // 25 !== 30 
-console.log(strictNotEqualityCompOp); // Output: true 
+strictNotEqualityCompOp = numThree !== numFive; // 25 !== 30
+console.log(strictNotEqualityCompOp); // Output: true
 
-// string type case 
-strictNotEqualityCompOp = numFive !== numSix; // 30 !== '25' 
-/** 
- * Here '25' in string and 30 in number and strict not-equality check bot value and type so output is true 
+// string type case
+strictNotEqualityCompOp = numFive !== numSix; // 30 !== '25'
+/**
+ * Here '25' in string and 30 in number and strict not-equality check bot value and type so output is true
  */
-console.log(strictNotEqualityCompOp); // Output: true 
+console.log(strictNotEqualityCompOp); // Output: true
+
+//? Logical operator
+/**
+ * - Logical operator are used to implement logic of our program
+ * - Logical operators work same as electronic fundamental gate works because computer system is electronic device
+ * - logical operators also return boolean value
+ */
+
+// AND Logical operator
+/**
+ * In And logical all the values should be true or truthy and conditions also be true than it return true boolean value otherwise return false boolean value
+ * For AND Logical operator, we use double ampersand symbol "&&" in programming
+ */
+
+let valueOne = 2;
+let valueTwo = 4;
+let valueThree = 8;
+let valueFour = 10;
+
+const andOperatorCaseOne = valueOne > valueTwo && valueFour < valueThree;
+//  here is the condition (2 > 4) && (10 < 8) both are false than it return false
+console.log(andOperatorCaseOne); // Output: false
+const andOperatorCaseTwo = valueTwo > valueThree && valueFour > valueOne;
+// here is the condition (4 > 8) && (10 > 2 ) here, first condition is false and second condition is true but all condition should true so it returns false
+console.log(andOperatorCaseTwo); // Output: false
+const andOperatorCaseThree = valueOne < valueTwo && valueThree > valueFour;
+// here is the condition (2 < 4) && (8 > 10) here, first condition is true but second condition is false so it return again false only
+console.log(andOperatorCaseThree); // Output: false
+const andOperationCaseFour = valueTwo > valueOne && valueFour > valueThree;
+// here is the condition (4 > 2) && (10 > 8) here, both the condition is true when all condition are true than AND logical operator return true
+console.log(andOperationCaseFour); // Output: true
+
+// OR Logical Operator
+/**
+ * OR logical operator needs one condition should be true among all condition than it return true boolean value otherwise false value.
+ * For OR logical operator we use double || symbol
+ * OR Logical operator needs first truthy or true condition only
+ */
+
+const orOperationCaseOne = valueThree > valueTwo || valueTwo < valueOne;
+// here is the condition   (8 > 4) || (4 < 2) so, here first condition is true than it return true boolean value
+console.log(orOperationCaseOne); // Output: true
+const orOperationCseTwo = valueFour < valueOne || valueThree > valueTwo;
+// here is the condition  (10 < 2) || (8 > 4) so, here second condition is true than it return true boolean
+console.log(orOperationCseTwo); // Output:true
+const orOperationCaseThree = valueOne > valueThree || valueTwo > valueFour;
+// here is the condition      (2 > 8) || (4 > 10) so, here both conditions are false than it return false boolean value
+console.log(orOperationCaseThree); // Output: false
+const orOperationCaseFour = valueOne < valueFour || valueThree > valueTwo;
+// here is the condition    (2 < 10) || (8 > 4), here both conditions are true than it return true boolean value.
+console.log(orOperationCaseFour); // Output: true
+
+// NOT Logical Operator
+/**
+ * - NOT Logical operator just reverse the condition boolean value and vice-versa
+ * - For NOT logical operator we use exclamation symbol !
+ */
+
+console.log(!true); // Output: false
+console.log(!false); // Output: true
+
+const notConditionExample = !(valueOne < valueTwo);
+console.log(notConditionExample); // Output: false
