@@ -67,4 +67,50 @@ console.log(personOne); // Hello, how are you Mr/Mrs
 const personTwo = greetPerson("Aayush");
 console.log(personTwo); // Hello, how are you Aayush 
 
+//* Different type of ways to create function in javascript 
+// In javascript, functions are first class member so we have multiple ways to create function. 
+
+// Regular function 
+function printSomethingOne() {
+    console.log("This is simple function"); 
+}
+
+printSomethingOne(); // Output: This is simple function 
+
+// function expression 
+// when we pass function reference to variable than it called function expression. 
+const printSomethingTwo = function () {
+    console.log("This is function expression"); 
+}
+
+printSomethingTwo(); // Output: This is function expression 
+
+// arrow function 
+// - arrow function is the shorter form of function expression so it's a syntactic sugar of function expression. 
+// - arrow function is introduced in ES06 version and because of arrow type syntax it called fat arrow function also. 
+
+const printSomethingThree = () => {
+    console.log("This is arrow function"); 
+}
+
+printSomethingThree(); // Output: This is arrow function 
+
+// Anonymous function
+/**
+ * - Anonymous function are special type of function, when we don't assign the variable or identifier to it and it's call with the identifier. 
+ * - Example of anonymous function is IIFE Immediate Invoke Function Expression  
+ */
+
+// Example IIFE 
+(function(){
+    console.log("Hello from IIFE Function"); 
+})() 
+/**
+ * To create IIFE we have to use two parentheses and implement function inside the first parentheses we create our function declaration. 
+ */
+
+
+
+
+
 
