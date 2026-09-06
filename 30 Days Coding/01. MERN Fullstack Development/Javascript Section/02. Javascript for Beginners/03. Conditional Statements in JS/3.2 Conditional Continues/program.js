@@ -15,7 +15,7 @@ let citizen = "American";
 // case
 citizen = "Indian";
 
-// Creating condition of casting vote in india
+// Example One: Creating condition of casting vote in india
 
 if (age >= 18) {
   // Here we created nested if-statement to check citizen
@@ -27,6 +27,23 @@ if (age >= 18) {
 } else {
   console.log("You are not eligible to cast your vote");
 }
+
+// Example Two: LoggedIn and Admin check
+// Creating with function
+function checkAdmin(email, loggedIn) {
+  if (loggedIn) {
+    if (email === "user@admin" && loggedIn) {
+      console.log("Admin loggedIn");
+    } else {
+      console.log("User loggedIn");
+    }
+  } else {
+    console.log("Please login to check admin");
+  }
+}
+
+checkAdmin("user@user", true);
+checkAdmin("user@admin", false);
 
 //? Else-if Statement
 /**
@@ -82,5 +99,26 @@ function gradeGenerator(student, percentage) {
   }
 }
 
-gradeGenerator('Aayush Vyas', 34); 
-gradeGenerator('Saijal Vyas', 75); 
+gradeGenerator("Aayush Vyas", 34);
+gradeGenerator("Saijal Vyas", 75);
+
+//? ternary operator
+/**
+ * - Ternary operator is shorter form with syntactic sugar on if-else conditional statement.
+ * - Ternary operator mainly use for single line condition based implementation but we can implement nested multiple condition also.
+ * - In ternary we using '?' question mark and colon ":"
+ *
+ *  Syntax of ternary operator
+ *   condition ? ` ternary-condition satisfied than this block of code executed`: `ternary-condition failed than this block of code executed`
+ */
+
+function findBiggerNumber(numOne, numTwo) {
+  const findingBiggerNumb =
+    numOne > numTwo
+      ? `${numOne} is bigger than ${numTwo}`
+      : `${numTwo} is bigger than ${numOne}`;
+  console.log(findingBiggerNumb);
+}
+
+findBiggerNumber(5, 2); 
+findBiggerNumber(2, 4); 
