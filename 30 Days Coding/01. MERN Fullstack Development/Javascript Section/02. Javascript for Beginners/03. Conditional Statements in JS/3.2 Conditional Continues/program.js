@@ -120,5 +120,110 @@ function findBiggerNumber(numOne, numTwo) {
   console.log(findingBiggerNumb);
 }
 
-findBiggerNumber(5, 2); 
-findBiggerNumber(2, 4); 
+findBiggerNumber(5, 2);
+findBiggerNumber(2, 4);
+
+//? Switch Statement
+/**
+ * - Switch Statement is also alternative statement for implement conditional logic.
+ * - Switch statement is more better cleaner way and readable approach to create conditional statement
+ * - In switch statement we match the cases with given expression to switch parentheses if the case match than it execute that statement among all.
+ *
+ *  Syntax of switch statement
+ *   switch(expression) {
+ *     case <first-expression>:
+ *           logical-implementation to this case;
+ *          break;  //! We have to use break statement other wise switch execute all the statement
+ *     case <second-expression>:
+ *          logical-implementation to this case;
+ *          break;
+ *      default:
+ *         logical-implementation to the default case:
+ *        * If no case matches default case run and executed
+ *    }
+ */
+
+// Example of Switch Case
+/**
+ * Let's create student grade system with switch Case
+ */
+
+function studentGradeSystem(student, grade) {
+  // switch(percentage) {
+  //     case percentage <= 100 && percentage > 90:
+  //       console.log(`${student} got A+ grade`);
+  //       break;
+
+  //     case percentage <= 90 && percentage > 80:
+  //          console.log(`${student} got A grade`);
+  //          break;
+
+  //     case percentage <= 80 && percentage > 70:
+  //         console.log(`${student} got B+ grade`);
+  //         break;
+
+  //     case percentage <= 70 && percentage > 60:
+  //         console.log(`${student} got B grade`);
+  //         break;
+
+  //     case percentage <= 60 && percentage > 50:
+  //         console.log(`${student} got C+ grade`);
+  //         break;
+
+  //     case percentage <= 50 && percentage > 40:
+  //         console.log(`${student} got C grade`);
+  //         break;
+
+  //     case percentage <= 40 && percentage > 30:
+  //         console.log(`${student} got D grade`);
+  //         break;
+
+  //     default:
+  //       console.log(`${student} failed in the exam`);
+  // }
+
+  /**
+   * ! This switch case is logic is wrong because it's match value not condition
+   * ! `switch` is primarily used for exact value matching,
+   * whereas `if...else` is used to evaluate conditions
+   * such as ranges, comparisons, and boolean expressions.
+   *
+   *  Now we change the logic so user provide grade we give ranges of percentage
+   */
+  const userGrade = String(grade).toLowerCase();
+  switch (userGrade) {
+    case "a+":
+      console.log(`${student} percentage range between 91-100`);
+      break;
+
+    case "a":
+      console.log(`${student} percentage range between 91-80`);
+      break;
+
+    case "b+":
+      console.log(`${student} percentage range between 81-70`);
+      break;
+
+    case "b":
+      console.log(`${student} percentage range between 71-60`);
+      break;
+
+    case "c+":
+      console.log(`${student} percentage range between 61-50`);
+      break;
+
+    case "c":
+      console.log(`${student} percentage range between 51-40`);
+      break;
+
+    case "d":
+      console.log(`${student} percentage range 41-30`);
+      break;
+
+    default:
+      console.log(`${student} failed the exam`);
+  }
+}
+
+studentGradeSystem("Aayush", "A+");
+studentGradeSystem("Saijal", "B+"); 
