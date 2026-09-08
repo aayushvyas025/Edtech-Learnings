@@ -1,6 +1,6 @@
-//* Inbuilt Methods of an array 
+//* Inbuilt Methods of an array
 /**
- * Let's explore the inbuilt methods of an array 
+ * Let's explore the inbuilt methods of an array
  */
 
 const myArray = ["Aayush", "Saijal", "John", "Peter"];
@@ -56,32 +56,32 @@ console.log(slicedArrayTwo); // Output: ['Aayush', 'Saijal' 'John']
  *    .splice(start-index, last-index, elementOne, elementTwo, elementThree)
  */
 
-// example one 
+// example one
 myArray.splice(0, 2); // This will mutate our original array
 const spliceArrayOne = myArray;
 console.log("spliceArrayOne ", spliceArrayOne); // Output: spliceArrayOne, ['Clark', 'Peter']
 console.log("myArray ", myArray); // Output: myArray, ['Clark', 'Peter']
 
-// example two 
-const superHeroes = ['Spiderman', 'Superman', 'Flash', 'Hulk', 'Ironman']; 
+// example two
+const superHeroes = ["Spiderman", "Superman", "Flash", "Hulk", "Ironman"];
 // Change Flash to Wonder-woman
-superHeroes.splice(2, 2, "Wonder woman"); 
-console.log(superHeroes); 
+superHeroes.splice(2, 2, "Wonder woman");
+console.log(superHeroes);
 
-superHeroes.splice(1,1, 'Thor'); 
-console.log(superHeroes); 
+superHeroes.splice(1, 1, "Thor");
+console.log(superHeroes);
 
-// Above all are the updating array operation 
+// Above all are the updating array operation
 
-// adding new element to an array  
-superHeroes.splice(0,0, "Black Widow", "Black Panther"); 
-console.log(superHeroes); 
+// adding new element to an array
+superHeroes.splice(0, 0, "Black Widow", "Black Panther");
+console.log(superHeroes);
 
-// 5. reverse() - reverse method of an array is used to reverse the array and print. 
-const reverseArray = superHeroes.reverse(); 
-console.log(reverseArray); 
-/** 
- * Output:  
+// 5. reverse() - reverse method of an array is used to reverse the array and print.
+const reverseArray = superHeroes.reverse();
+console.log(reverseArray);
+/**
+ * Output:
  *  [
  *'Ironman',
  * 'Wonder woman',
@@ -90,4 +90,4 @@ console.log(reverseArray);
  * 'Black Panther',
  * 'Black Widow'
  * ]
-*/
+ */
