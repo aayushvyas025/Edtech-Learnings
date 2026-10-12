@@ -165,3 +165,33 @@ console.log(person?.address); // Here address property is available in object so
 
 // Now using optional chaining on greet method
 console.log(person?.greet?.());
+
+
+/**
+ * ? Nullish collapsing operator 
+ *  The nullish  coalescing operator (??) is a logical operator that returns its right hand side operand  only when its lef-hand side operand is null or undefined. If the left-hand side has any other value it returns the left-hand side. 
+ *  
+ * ? How it works ? 
+ *  - Syntax: leftExp ?? rightExp 
+ *  - Nullish definition: A value is 'nullish' only if its strictly null or strictly undefined. 
+ *  - Preservation of falsy values: Unlikely the logical OR Operator (||) which treats all falsy value (0, "", false, NaN) as triggers for the right hand side. ?? preserves valid falsy inputs. 
+ */
+
+// ? Code Example 
+
+// 1. Comparing ?? with ||  
+const count = 0; 
+
+console.log(count || 10); // OR Operator treats 0 as falsy value which is but when we have to use 0 we can't use in logical operator  
+
+console.log(count ?? 100); // Output: 0  
+
+// 2. Handling Empty Strings and Boolean Value 
+
+// strings 
+const username = ""; 
+console.log(username ?? "Guest"); 
+
+// boolean 
+const isActive = false; 
+console.log(isActive ?? true); // Output: false 
