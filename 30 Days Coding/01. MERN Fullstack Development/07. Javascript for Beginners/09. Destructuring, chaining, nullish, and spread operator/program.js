@@ -119,29 +119,49 @@ console.log(user);
 //? Rest parameters in Functions
 
 function sum(...num) {
-    // Here this 
+  // Here this
   return num.reduce((acc, num) => acc + num, 0);
 }
 
-const res = sum(1, 5, 6, 7); 
-console.log(res); 
+const res = sum(1, 5, 6, 7);
+console.log(res);
 
-//? Rest operator with Array Destructuring 
-const colors = ['red', 'green', 'blue', 'yellow', 'purple']; 
+//? Rest operator with Array Destructuring
+const colors = ["red", "green", "blue", "yellow", "purple"];
 
 // destructure && rest operator
-const [colorOne, colorTwo, ...remainingColors] = colors; 
+const [colorOne, colorTwo, ...remainingColors] = colors;
 
-console.log(colorOne); 
+console.log(colorOne);
 console.log(colorTwo);
 console.log(remainingColors); // Output: [ 'blue', 'yellow', 'purple' ]
 
+//? Rest Operator with Object Destructuring
 
-//? Rest Operator with Object Destructuring 
-
-const {...userProfileDetails} = user; 
-console.log(userProfileDetails); 
-
-
+const { ...userProfileDetails } = user;
+console.log(userProfileDetails);
 
 //! Rest operator always packs the elements into a standard JavaScript array.
+
+/**
+ * ? Optional Chaining in Javascript
+ *  - Optional Chaining (?.) operator in Javascript allows you to safely access deeply nested object properties, call methods or lookups array indices without throwing a TypeError if an intermediate reference is null or undefined.
+ *
+ *  - Instead of crashing your application, the expression short-circuits and immediately returns undefined
+ */
+
+// Example of optional chaining
+const person = {
+  name: "Kratik Vyas",
+  age: 27,
+  greet: () => console.log(`Hello How are you`),
+};
+
+// From this person object we access properties with the help of optional chaining.
+
+console.log(person?.name);
+console.log(person?.age);
+console.log(person?.address); // Here address property is available in object so without the crashing our code it's return undefined.
+
+// Now using optional chaining on greet method
+console.log(person?.greet?.());
