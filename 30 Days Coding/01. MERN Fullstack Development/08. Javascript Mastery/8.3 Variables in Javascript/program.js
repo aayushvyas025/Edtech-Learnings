@@ -81,3 +81,61 @@ console.log(number);
 // can we access the var keyword variable 
 console.log(myName); // Output: Aayush Vyas 
 
+/**
+ * ? let keyword in Javascript 
+ * - let keyword is also used to create variables in javascript and it's modern approach 
+ * - let keyword create block-scope variable and we can red-assign but can't re-declare it like var keyword. 
+ * - let keyword block-scope variable means variable is tightly coupled with that block and accessible, validate and live-up in that variable. 
+ */
+
+/**
+ * Example: let keyword variable 
+ */
+
+let userName = 'Aayush Vyas'; 
+console.log(userName); 
+
+// re-assign the value of userName 
+userName = 'Kratik Vyas'; 
+console.log(userName);  
+
+// Case: let keyword variable creates block-scope variable 
+
+{
+    // let access userName variable, we can because this block-scope is child of global scope methods environment 
+    console.log(userName); 
+
+    // Let creates variable 
+    let myAge = 27; 
+    console.log(myAge); 
+}
+
+// Can we access this variable outside block-scope 
+// console.log(myAge); // It give error : myAge is not defined 
+
+
+/**
+ * ? const keyword in javascript 
+ *  - const keyword also used to create variables but constants and they would be static throughout the program we can't update them in some complex data the context is memory address remain same but we can changes it's value. 
+ *  - const keyword also creates block-scoped variables same as let keyword constant 
+ * 
+ * ? Some rules of const keyword 
+ *  This are the mandatory rules of const keyword otherwise js engine throw error to us. 
+ *  - We can't just declare our constant we have to initialized 
+ *  - We can't re-assign the value of constant  
+ * 
+ *! - const and let are introduced in es06 version and creates block-scoped variable.  
+ */ 
+
+/**
+ * Example: const keyword  
+ */
+
+// const myConstant;  It give error we can't declare our variable 
+
+const myConstant = 25; 
+console.log(myConstant); // Output: 25 
+
+// We can re-assign the value 
+// myConstant = 30; We can't re-assign the value of constant. 
+
