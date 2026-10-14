@@ -1,1 +1,1 @@
-# Javascript for Beginners 
+# Javascript for Beginners Section 
