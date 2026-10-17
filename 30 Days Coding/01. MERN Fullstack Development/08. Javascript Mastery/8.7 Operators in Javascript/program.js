@@ -93,11 +93,36 @@ console.log(randomVal); // Output: 0
  * - Increment and decrement operator is unary operator which increase or decrease our value by 1 mainly we use fro looping processing. 
  * 
  * ? This increment and decrement operator are of two type 
- *   1. Prefix Increment/Decrement
+ *   1. Prefix Increment/Decrement ++<value> 
  *    In prefix the value was update than evaluate in both increment or decrement. 
- *   2. Postfix Increment/Decrement
- *   In Postfix first value evaluate than update in both increment or decrement 
+ *   2. Postfix Increment/Decrement <value>++ 
+ *   In Postfix first value evaluate than update in both increment or decrement  
  */
+
+/**
+ * Example of Postfix and Prefix Increment Operator 
+ */
+
+
+// fetch the value of randomVal; 
+console.log(randomVal); // Output: 0 
+// prefix 
+console.log(++randomVal);  // Output: 1  
+
+// postfix 
+console.log(randomVal++); // Output: 1 
+console.log(randomVal); // Output: 2 
+
+/**
+ * Example of Prefix and Postfix Decrement Operator 
+ */
+
+// prefix 
+console.log(--randomVal); // Output: 1 
+
+// postfix 
+randomVal--; 
+console.log(randomVal); // Output: 0 
 
 
 
