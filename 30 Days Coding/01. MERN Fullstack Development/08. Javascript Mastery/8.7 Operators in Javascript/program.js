@@ -170,67 +170,117 @@ console.log(resultSmallerThan); // Output: false
 
 /**
  * Smaller than Equal too Operator '<='
- * Smaller than equal too operator is perform smaller than comparison or checking any operands are equal to each other or not than it return true boolean value otherwise false boolean value. 
-*/
-
-let resultSmallerThanEqualTo = numOne <= numTwo; 
-console.log(resultSmallerThanEqualTo) // Output: true  
-
-resultSmallerThanEqualTo = numFour <= numOne; 
-console.log(resultSmallerThanEqualTo); // Output: false  
-
-/**
- * Equality Operator 
- *  - Equality operators are perform equality comparison between given operands.  
- *  - Equality are operators are of two types 
- *     -- Loose Check equality operator '==' 
- *        loose equality operator only compare operands on the basis of it's value. 
- *     -- Strict Check equality operator '===' 
- *       strict equality operator compare operands on the basis of it's type and value. 
+ * Smaller than equal too operator is perform smaller than comparison or checking any operands are equal to each other or not than it return true boolean value otherwise false boolean value.
  */
 
-// Loose equality operator '==' 
-let looseEqualityOpr = numOne == numTwo;  //  5 == 5 
-console.log(looseEqualityOpr); // Output: true 
+let resultSmallerThanEqualTo = numOne <= numTwo;
+console.log(resultSmallerThanEqualTo); // Output: true
 
-looseEqualityOpr = numThree == numFour;  // '6' == 6 
-console.log(looseEqualityOpr); // Output: true because loose equality checks only value of operands 
-
-looseEqualityOpr = numFour == numFour; // 5 == 6 
-console.log(looseEqualityOpr); // Output: false  
-
-// Strict equality operator '===' 
-let strictEqualityOpr = numOne === numTwo; // 5 === 5 value same and it's type also 
- console.log(strictEqualityOpr); // Output: true 
-
- strictEqualityOpr = numFour === numThree; // '6' === 6 here data type is different 
- console.log(strictEqualityOpr); // Output: false 
-
+resultSmallerThanEqualTo = numFour <= numOne;
+console.log(resultSmallerThanEqualTo); // Output: false
 
 /**
- * Not-Equality Operator  
- *  - Not equality operator used to perform not-equality comparison of given operands. 
- *  - Same as Equality, Not Equality operator are of two types: 
- *    -- Loose Not-equality Check Operator '!=' 
- *        Loose not-equality check operator checks only operands value. 
- *    --  Strict Not equality Operator '!==' 
- *        Strict Not equality operator checks both value and type of operands   
+ * Equality Operator
+ *  - Equality operators are perform equality comparison between given operands.
+ *  - Equality are operators are of two types
+ *     -- Loose Check equality operator '=='
+ *        loose equality operator only compare operands on the basis of it's value.
+ *     -- Strict Check equality operator '==='
+ *       strict equality operator compare operands on the basis of it's type and value.
  */
 
+// Loose equality operator '=='
+let looseEqualityOpr = numOne == numTwo; //  5 == 5
+console.log(looseEqualityOpr); // Output: true
 
-// loose not-equality operator '!='  
-let looseNotEqualityOpr = numOne != numFour; // 5 != 6 
-console.log(looseNotEqualityOpr); // Output: true 
+looseEqualityOpr = numThree == numFour; // '6' == 6
+console.log(looseEqualityOpr); // Output: true because loose equality checks only value of operands
 
-looseNotEqualityOpr = numThree != numFour; // 6 != '6' 
-console.log(looseNotEqualityOpr); // Output: false  
+looseEqualityOpr = numFour == numFour; // 5 == 6
+console.log(looseEqualityOpr); // Output: false
 
-// strict not-equality operator '!==' 
-let strictNotEqualityOpr = numOne !== numFour; // 5 !== '6' 
-console.log(strictNotEqualityOpr); // Output: true 
+// Strict equality operator '==='
+let strictEqualityOpr = numOne === numTwo; // 5 === 5 value same and it's type also
+console.log(strictEqualityOpr); // Output: true
 
-strictNotEqualityOpr = numThree !== numFour; // 6 !== '6' here is not equal because one is number and other is string 
-console.log(strictNotEqualityOpr); // Output: true 
+strictEqualityOpr = numFour === numThree; // '6' === 6 here data type is different
+console.log(strictEqualityOpr); // Output: false
 
+/**
+ * Not-Equality Operator
+ *  - Not equality operator used to perform not-equality comparison of given operands.
+ *  - Same as Equality, Not Equality operator are of two types:
+ *    -- Loose Not-equality Check Operator '!='
+ *        Loose not-equality check operator checks only operands value.
+ *    --  Strict Not equality Operator '!=='
+ *        Strict Not equality operator checks both value and type of operands
+ */
 
- 
+// loose not-equality operator '!='
+let looseNotEqualityOpr = numOne != numFour; // 5 != 6
+console.log(looseNotEqualityOpr); // Output: true
+
+looseNotEqualityOpr = numThree != numFour; // 6 != '6'
+console.log(looseNotEqualityOpr); // Output: false
+
+// strict not-equality operator '!=='
+let strictNotEqualityOpr = numOne !== numFour; // 5 !== '6'
+console.log(strictNotEqualityOpr); // Output: true
+
+strictNotEqualityOpr = numThree !== numFour; // 6 !== '6' here is not equal because one is number and other is string
+console.log(strictNotEqualityOpr); // Output: true
+
+/**
+ * ? Logical Operators
+ *  Logical operators are used to perform logical operation on our operands and returns boolean value.
+ *  This logical operator are  of more Electrical Gates type because computer system have electric switch only.
+ *
+ *  Let explore different type of logical operators
+ */
+
+/**
+ * 1. AND Operator
+ *  - In AND Operator, all the operands value or condition should be true otherwise it give false boolean value.
+ *  - For AND Operator we use '&&' double ampersand operator
+ *  - This AND Operator work same as AND Gate
+ *
+ */
+
+// Example of AND Operator
+// Here 0 is false and 1 is true
+console.log(0 && 1); // Output: false, false && true is false
+console.log(1 && 0); // Output: false,  true && false is false
+console.log(0 && 0); // Output: false, false && false is false
+console.log(1 && 1); // Output: true , true && true is true
+// Here, the condition is when the all condition or value true than only it AND Operator returns true
+
+// Example with value
+let age = 21;
+let indianCitizen = true;
+
+// scenario: if the person is age greater than 18 & indianCitizen than can vote
+console.log(age >= 18 && indianCitizen === true); // Output: true
+
+/**
+ * 2. OR Operator
+ *  - In OR operator only  required one condition or operand should be true in given conditions or operands otherwise it return false boolean value.
+ *  - For OR Operator we use  double pipe `||` operator.
+ *  - This OR Operator work same as OR Gate
+ */
+
+// Example of OR Operator
+// Here 0 is false and 1 is true
+console.log(1 || 0); // Output: true because 1 means true
+console.log(0 || 1); // Output: true because one value is true
+console.log(0 || 0); // Output: false because both value is false
+console.log(1 || 1); // Output: true because both value is true
+
+/**
+ * 3. NOT Operator
+ * - NOT operator perform the opposite condition to our operand or condition  and vice versa.
+ * - For NOT operator, we use exclamation '!' symbol.
+ * - NOT Operator work same as NOT gate
+ */
+
+console.log(!0); // Output: true
+console.log(!1); // Output: false
