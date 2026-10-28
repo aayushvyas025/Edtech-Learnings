@@ -162,6 +162,53 @@ const flatMappedArr = number.flatMap((num) => [num, num * 20]);
 console.log(flatMappedArr); 
 
 
+/**
+ * ?  Array.splice() method 
+ *  The splice() method  adds new items to an array. 
+ *  
+ * Syntax of splice() method  
+ *  - Array.splice(target, eliminate, 'new-element', 'new-element') 
+ *   Here,  
+ *   -- target: target is the zero index based argument where we pass index to targeted index from where we have to add new elements 
+ *   -- eliminate: Here eliminate is also index-based argument to remove elements from target index.  
+ *   -- Rest of parameters adding the new elements in our arrays 
+ * 
+ */ 
+
+
+const femaleSuperHeroes = ['Batwoman', 'Super girl']; 
+
+femaleSuperHeroes.splice(0, 0, 'Wonder woman', 'Jean grey'); 
+console.log(femaleSuperHeroes); // Output:  ['Wonder woman', 'Jean grey', 'Batwoman', 'Super girl']
+
+femaleSuperHeroes.splice(1, 2, 'Shehulk', 'Captain Marvel', 'Miss Marvel'); 
+console.log(femaleSuperHeroes) // Output:  ['Wonder woman', 'Shehulk', 'Captain Marvel', 'Miss Marvel', 'Super girl']
+ 
+
+/**
+ * ! .splice() method will mutate the original array 
+ */
+
+
+/**
+ * ? Array.slice() method  
+ *  The `slice()` method slices out of piece of an array into a new array. 
+ *  The `slice()` method creates a new array. 
+ *  The `slice()` method does not remove any elements from the source array. 
+ * 
+ *  Syntax of slice() method 
+ *   Array.slice(start, end)  
+ *   - start: the zero based index argument from where we have to start slice. 
+ *   - end (optional): the zero index argument upt to slice end and excluded also. 
+ */
+
+// console.log(femaleSuperHeroes); 
+
+const sliceFemaleSuperHeroesOne = femaleSuperHeroes.slice(2); 
+console.log(sliceFemaleSuperHeroesOne); // Output: ['Captain Marvel', 'Miss Marvel', 'Super girl']
+
+const sliceFemaleSuperHeroesTwo = femaleSuperHeroes.slice(0, 3); 
+console.log(sliceFemaleSuperHeroesTwo); // Output:  ['Wonder woman', 'Shehulk', 'Captain Marvel']
 
 
 
