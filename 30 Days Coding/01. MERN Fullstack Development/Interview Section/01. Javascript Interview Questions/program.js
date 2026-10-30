@@ -35,3 +35,12 @@ function sum(valOne, valTwo) {
 
 let result = sum(5, 15); 
 console.log(result); 
+
+// Q4. Write a function to calculate area of rectangle 
+
+function areaOfRectangle(width, length) {
+  return width * length; 
+}
+
+let areaResult = areaOfRectangle(22, 30); 
+console.log(areaResult); 
