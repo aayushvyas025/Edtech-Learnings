@@ -43,4 +43,32 @@ function areaOfRectangle(width, length) {
 }
 
 let areaResult = areaOfRectangle(22, 30); 
-console.log(areaResult); 
+console.log(areaResult);  
+
+// Q5. Write a function that takes a string and returns the reversed version of it 
+
+// version first : for loop 
+function reverseStrOne(str="") {
+  let reverseStr = ''; 
+  for(let idx = str.length - 1; idx >=0; idx--) {
+    reverseStr += str[idx]; 
+  }
+
+  return reverseStr; 
+}
+
+
+let resultStr = reverseStrOne('Aayush'); 
+console.log(resultStr); 
+
+
+// version second: array and string conversion methods 
+
+function reverseStrTwo(str="") {
+ const strArr = str.split(""); 
+return strArr.reverse().join("")
+}
+
+resultStr = reverseStrTwo('Kratik'); 
+console.log(resultStr); 
+
