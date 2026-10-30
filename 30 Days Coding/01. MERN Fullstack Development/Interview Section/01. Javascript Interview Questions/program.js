@@ -72,3 +72,18 @@ return strArr.reverse().join("")
 resultStr = reverseStrTwo('Kratik'); 
 console.log(resultStr); 
 
+// Q6. Write a function that checks if a given number is even or odd and return string output as 'Even' or 'Odd' 
+
+function checkEvenOdd(num) {
+  if(typeof num !== 'number') console.log('Please, pass number as an args'); 
+
+  if(num % 2 === 0) {
+    console.log('Even'); 
+  }else {
+    console.log('Odd'); 
+  }
+}
+
+// checkEvenOdd('QQ'); 
+checkEvenOdd(555); 
+checkEvenOdd(200); 
