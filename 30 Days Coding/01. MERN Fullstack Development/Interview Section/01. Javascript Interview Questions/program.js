@@ -26,3 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
     numTwo++;
   } while (numTwo <= 5);
 });
+
+// Q3. Write a function to add two numbers and return the result
+
+function sum(valOne, valTwo) {
+  return valOne + valTwo; 
+}
+
+let result = sum(5, 15); 
+console.log(result); 
