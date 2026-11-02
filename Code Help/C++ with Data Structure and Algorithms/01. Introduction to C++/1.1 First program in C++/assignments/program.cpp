@@ -34,6 +34,25 @@
  */  
 
  
+ using namespace std; 
+
+ /**
+  * ? Can we use other way to declare std library namespace instead of using globally namespace statement 
+  *  
+  *  What is Namespace ?  
+  *  - Think of a namespace like  family last name. If you have two named "John" in the same room, it causes confusion. But if one is 'John Smith' and other is 'John Doe', you can easily tell them apart or recognise them apart. 
+  *   
+  * - In programming, a namespace acts as a container that groups related functions, variables, and classes together under a single name. This prevents naming collisions - which happen when you write a function that has the exact same name as a build-in tool or a third party library.  
+  * 
+  * Ways to standard library  
+  */
+
+ int main() {
+    cout << "Hello" << endl; 
+    std::cout << 'World' << std::'\n'; 
+    return 0; 
+   
+ }
 
 
 
