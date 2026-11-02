@@ -1,0 +1,7 @@
+{
+    "name":"Bhopal",
+    "temperature":32, 
+    "isRaining":false, 
+    "forecast":["Sunny", "Cloudy", "Rainy"]
+} 
+
