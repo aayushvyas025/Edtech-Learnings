@@ -49,7 +49,7 @@
 
  int main() {
     cout << "Hello" << endl; 
-    std::cout << 'World' << std::'\n'; 
+    std::cout << 'World' << '\n'; 
     return 0; 
    
  }
