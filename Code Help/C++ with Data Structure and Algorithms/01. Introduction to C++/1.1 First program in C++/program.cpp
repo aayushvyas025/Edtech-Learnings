@@ -49,8 +49,12 @@ int main()
 /**
  * ? int main() function
  * int -> int is the datatype which return by main() function
- * main() -> main function is the entry point of our program from where our program starts execution
+ * main() -> main function is the entry point of our program from where our program starts execution 
+ * ! In programming we represent function with parentheses
  * {} -> Curly braces are known as scope of main function in which logic of function we implement, variables and methods are valid, visible, and accessible inside this braces only.
  * ! This curly braces define the scope of our function
- * return 0; As we understand that c++ is static type language so this 0 in integer which we are returning , here 0 conveys message to our system that our program executed successfully and if use non-zero value that indicate that error to execute our program
+ * return 0; As we understand that c++ is static type language so this 0 in integer which we are returning , here 0 conveys message to our system that our program executed successfully and if use non-zero value that indicate that error to execute our program. 
+ * ; : semi-colon is used to terminate the current line otherwise compiler throw error. 
  */
+
+ 
