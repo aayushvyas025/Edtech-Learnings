@@ -44,12 +44,24 @@
   *   
   * - In programming, a namespace acts as a container that groups related functions, variables, and classes together under a single name. This prevents naming collisions - which happen when you write a function that has the exact same name as a build-in tool or a third party library.  
   * 
-  * Ways to standard library  
+  * Ways to  use standard library in C++ 
+  *  
+  * ? 1st. The Scope resolution operator (::) 
+  * - The double colon (::) is called scope resolution operator. It tells the compiler exactly where to look for a methods in our program or we say it's resolve the scope by using scope resolution operator it determine that the using methods belong to which namespace.  
+  * 
+  * - When you type std::cout , you are telling to compiler that 'Look inside the std namespace container, find cout functionality and use it.  
+  * 
+  * ? 2nd. Using namespace std;  statement 
+  *   You will often seen that beginners and competitive programmers using `using namespace std` at the top of their files 
+  *  While save you from typing std:: 'Scope resolution operator' repeatedly, it is generally discouraged in large or professional projects. Importing the entire namespace dumps thousands of standards C++ names into your global code space, which drastically increases the risk of accidental naming conflicts (know as namespace pollution). 
+  * 
+  * ! Explicitly typing std:: keeps your code clean, predictable and collision free.  
   */
 
  int main() {
     cout << "Hello" << endl; 
     std::cout << 'World' << '\n'; 
+   // Here we are using std library namespace with scope resolution operator std:: 
     return 0; 
    
  }
