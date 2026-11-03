@@ -92,7 +92,17 @@
       *  \n        |  Inside quotes:"Text\n"  | Faster(don't flush buffer)    | General text formatting and loops 
       *  std::endl | Chained with `<<`:`<<`  | Slower (forces a buffer flush) | Debugging or interactive console inputs 
       */
-     return 0; 
+
+    /**
+     * ? What happen when we return -1 in main function of c++ 
+     *  When we return -1 from the main() function in C++, the program terminates and passes the non-zero exit status to the operating system, indicating error or abnormal termination occurred. 
+     *  
+     * The operating system reads the main return value to see if the program succeeded: 
+     *  0 : Success. The program ran completely and safely. 
+     * Non zero (like 255/ -1): Failure. The program encountered an issue 
+     */
+   //   return -1; 
+   return 0; 
    
  }
 
