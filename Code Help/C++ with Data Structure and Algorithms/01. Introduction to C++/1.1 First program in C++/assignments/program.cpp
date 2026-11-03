@@ -47,7 +47,8 @@
   * Ways to  use standard library in C++ 
   *  
   * ? 1st. The Scope resolution operator (::) 
-  * - The double colon (::) is called scope resolution operator. It tells the compiler exactly where to look for a methods in our program or we say it's resolve the scope by using scope resolution operator it determine that the using methods belong to which namespace.  
+  * - The double colon (::) is called scope resolution operator. It tells the compiler exactly where to look for a methods in our program or 
+  * 
   * 
   * - When you type std::cout , you are telling to compiler that 'Look inside the std namespace container, find cout functionality and use it.  
   * 
@@ -60,9 +61,38 @@
 
  int main() {
     cout << "Hello" << endl; 
-    std::cout << 'World' << '\n'; 
+    std::cout << "World" << '\n'; 
    // Here we are using std library namespace with scope resolution operator std:: 
-    return 0; 
+   
+   /**
+     * ? How we can start our execution from new line in C++ 
+     *  To start the execution or printing of text from a new line in C++, you can break the output using either the escape sequence 'new line character' or the stream manipulator endl 'end the line'  
+     * 
+     * Let explore and understand both methods in depth. 
+     *  
+     * 1. Using the `\n` Escape sequence (Recommended for speed) 
+     *  The `\n` character is placed  directly inside double quotes (""). It tells the compiler to move outout cursor to the next line immediately.  
+     *  The escape sequence is also known as new line character also. 
+     * ! escape sequence is native to c language which default added in c++ because it's extension of c language 
+     */
+    
+     std::cout << "Hello\n Again\n"; 
+     // Here in above line of code "Hello" first print than execution starts printing from new line before Again 
+    
+    /**
+     * 2. Using the std::endl Manipulator 
+     *  The std::endl manipulator stands outside of quotation marks. It moves the cursor to a new line and flushes the output buffer (forces the text to appear on the screen immediately). 
+     * 
+     * 
+     */ 
+
+     /**
+      * ? Summary Comparison 
+      *  Method    |   Syntax                 | Performance                   |  Use Cases 
+      *  \n        |  Inside quotes:"Text\n"  | Faster(don't flush buffer)    | General text formatting and loops 
+      *  std::endl | Chained with `<<`:`<<`  | Slower (forces a buffer flush) | Debugging or interactive console inputs 
+      */
+     return 0; 
    
  }
 
