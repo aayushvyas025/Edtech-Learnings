@@ -42,7 +42,14 @@ int main()
      * double datatype for storing decimal numbers only but having bigger range than float type
      */
     double dbl_num = 225.7889;
-    cout << dbl_num << endl; // Output: 225.789 // todo  Assignment why the output is 225.789 instead of 255.7889
+    cout << dbl_num << endl; // Output: 225.789 // todo  Assignment why the output is 225.789 instead of 255.7889 
+    
+   /**
+    * long datatype for storing integer numbers only but having bigger range than integer type 
+    */
+    
+    long number_one = 2556; 
+    cout << number_one << endl; 
 
     /**
      * bool datatype for storing logical type which creates conditional logic in our program
@@ -73,8 +80,28 @@ int main()
      */ 
 
      /**
-      * ? Size of datatypes in C++ 
+      * ? Size of datatypes in C++  
+      *   As we understand that this datatypes takes memory size in our program memory and in c++ the memory size of datatypes are machine dependent it's vary according to computer system machine specification. 
+      *  
+      * In c++ we have inbuilt utility function to check the size of our datatype with the help of sizeof() 
+      *  
+      * ? sizeof() method  
+      *  - In C++ sizeof() is unary compiled time operator that returned the memory size of variable or data types in `bytes`   
+      * todo It returns an unsigned integer value of type std::size_t Understand this also !!!! 
       */
+
+      /**
+       * Let practically find memory size of variable with sizeof operator 
+       */ 
+     // int datatype 
+       cout << sizeof(num) << '\n'; // Output: 4 
+       /**
+        * ? Here Output: 4 means Bytes and in 1 BYTE = 8 bits so, 4 * 8 = 32 bits memory space takes by integer datatype in c++ program memory 
+        */
+   // float datatype 
+      cout << sizeof(float_num) << endl; // Output: 4 it means it also takes 4 Byte of memory block size in our program memory 
+    
+      // double 
 
     return 0;
 }
