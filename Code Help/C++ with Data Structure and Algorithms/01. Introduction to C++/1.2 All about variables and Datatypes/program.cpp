@@ -74,7 +74,9 @@ cout << number << endl;
 
 
 
-
+/**
+ * ! We can't re-declare the same name/identifier variables or other methods in block scope otherwise compiler give error to us !!! 
+ */
 
 
   return 0; 

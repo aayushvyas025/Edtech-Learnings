@@ -49,7 +49,13 @@ int main()
     */
     
     long number_one = 2556; 
-    cout << number_one << endl; 
+    cout << number_one << endl;  
+
+  /**
+   * short datatype for storing integer numbers but it's range is lesser as compare to integer mainly we used to preserve or save our memory compared to standard int datatype. 
+   */
+   short number_two = 125; 
+   cout << number_two << endl; 
 
     /**
      * bool datatype for storing logical type which creates conditional logic in our program
@@ -101,7 +107,50 @@ int main()
    // float datatype 
       cout << sizeof(float_num) << endl; // Output: 4 it means it also takes 4 Byte of memory block size in our program memory 
     
-      // double 
+      // double datatype 
+      cout << sizeof(dbl_num) << endl;  
+      // Output: 4 means 8 Byte means 64 bits  
+      
+      // long datatype 
+      cout << sizeof(number_one) << endl;  // Output: 4 means 4 Byte means 32 bit  
 
+      // short datatype 
+      cout << sizeof(number_two) << endl; // Output: 2 means 2 Byte 
+
+      // char datatype 
+      cout << sizeof(my_char) << endl; // Output: 1 Byte means 8 bits  
+
+      // bool datatype 
+      cout << sizeof(isAdult) << endl; // Output: 1 Byte means 8 bits 
+      /**
+       * ! In bool only 1 bits needed to save our bool data because it's have only two value 0 and 1 and other 7 bits are going wasted but we use byte as standard unit for computer memory 
+       */
+
+
+       /**
+        * ? Range of Datatypes  
+        *  - Every primitive datatype have ranges to store maximum/minimum amount of data in it. 
+        *  - We can find the ranges of datatype with formula of 2 the power n - 1 `2^n-1` where n represent n numbers of bit 
+        *  - Binary numbers have only 0 and 1 value so its outcomes always comes 2 only 1 or 0  
+        * 
+        *  ? So in programming data stored in two ways signed and unsigned data 
+        * 
+        *  - Unsigned data type (Positive and zero only numbers) 
+        *    Formula: 0 to 2^n - 1  
+        *    Why: All `n` bits are used for the number itself. We subtract 1 from 2n because counting starts from 0. 
+        *   Example: 1 Byte (8-bit unsigned): 0 to (2^8 - 1) --> 0 to 255 
+        * 
+        *  - Signed data type (Both Negative and Positive numbers) 
+        *    Formula: -2^(n-1) to 2^(n-1) - 1 
+        *    Why: One bit (the leftmost bit) is reversed to store sign (0 for positive, 1 for negative) leaving n - 1 bits for actual value. 
+        *    Example: 1 Byte 2^(8-1) to 2^(8-1) - 1 = 2 ^ 7-1 to 2^7 -1 = -128 to 127  
+        */
+     
+        /**
+         * todo Assignment 
+         *  - Decimal to Binary & Binary to Decimal Number System 
+         *  - How data stored in our program memory 
+         *  - After understanding data stored in memory find how formula of range datatype is working correctly 
+         */
     return 0;
 }
