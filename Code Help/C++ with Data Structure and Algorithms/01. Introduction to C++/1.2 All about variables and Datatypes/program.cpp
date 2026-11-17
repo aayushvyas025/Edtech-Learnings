@@ -77,7 +77,16 @@ cout << number << endl;
 /**
  * ! We can't re-declare the same name/identifier variables or other methods in block scope otherwise compiler give error to us !!! 
  */
+ 
+ // example of error related to re-declaration of same variable in similar scope 
+//  int number = 122;  it give error:  'int number' previously declared here
+ 
 
+   {
+    // In block-scope  we can define 
+    int number = 122; 
+    cout << number << endl;  // Output: 122 
+  }
 
   return 0; 
  }
