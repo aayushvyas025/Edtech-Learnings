@@ -146,9 +146,42 @@ int main()
      * 
      *
      * todo Assignment:
-     *   1. Understand how we store data in our program like how integer, char, bool, float, double stored.
-     *   2. How's positive and negative number stored in memory 
+     *   1. Understand how computer store data in our program like how integer, char, bool, float, double stored.
+     *   2. How's positive and negative number stored in memory  
      */ 
+
+     /**
+      * ? How data stored in program memory  
+      *  Let understand how data stored data in memory from first principle: 
+      *    
+      *   Whenever we declare the variable, the computer reserves some memory to store its value. 
+      *    For example: 
+      *      int age = 28; 
+      *   
+      *    Here: 
+      *      int -> data type (what kind of data we want to store) 
+      *      age -> variable name/identifier 
+      *      28 -> value assigned to the variable.  
+      * 
+      *  Think of a variable as a labelled storage  location in  memory  
+      *  
+      *  ? What happens internally  
+      *  Computers store information using binary digits (bits) 
+      *  
+      *  A bit can have only two possible values 
+      *   - 0 
+      *   - 1  
+      * 
+      *  8 bits make a 1 byte 
+      *   For Example  
+      *    ! 1 Bit = 0 or 1, 1 Byte = 8 bits, 1KB = 1024 bytes, 1MB = 1024KB, 1GB = 1024MB 
+      * 
+      *  When we declare a variable, memory is allocated to its data-type and implementation. 
+      * 
+      * ? How different data-types store data 
+      *  Let understand the five fundamental data types how they store 
+      *     
+      */
 
      /**
       * ? Size of datatypes in C++  
