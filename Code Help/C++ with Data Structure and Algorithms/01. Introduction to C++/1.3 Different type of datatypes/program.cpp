@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -30,7 +31,8 @@ int main()
      */
 
     float float_num = 25.667;
-    cout << float_num << endl; // Output: 25.667
+    cout << float_num << endl; // Output: 25.667 
+
 
     /**
      * char datatype for storing characters in our program
@@ -42,7 +44,70 @@ int main()
      * double datatype for storing decimal numbers only but having bigger range than float type
      */
     double dbl_num = 225.7889;
-    cout << dbl_num << endl; // Output: 225.789 // todo  Assignment why the output is 225.789 instead of 255.7889 
+    cout << dbl_num << endl; // Output: 225.789 
+    /**
+     * ? Why the output is roundof to 255.789 not print 255.7889 
+     * 
+     * ? Why happening 
+     *  This is happening because of default decimal precision and floating point-representation in C++'s cout, not because double is storing only three decimal points.   
+     * 
+     *  Let understand step by step  
+     *    our code 
+     *    double dbl_num = 255.7889; 
+     *     cout << dbl_num << endl;  
+     *   
+     *  Output: 
+     *    255.789  
+     * 
+     * ? Why does is happen 
+     *    By default, C++ cout uses a precision of 6 significant digits when displaying floating-point numbers 
+     *    Notice that significant digits are different from decimal places. 
+     *    
+     *    For example:  
+     *     Number                                       Significant digits 
+     *     255.7889                                          7
+     *     255.789                                           6 
+     * 
+     *  That's mean default show 6 digits including  decimals also  
+     * 
+     * ! Important: Your `double` variable still stores an approximation of the original decimal value. `cout` is only limiting how many digits is display. 
+     *  
+     * ? How to display the complete decimal value ?  
+     *  You can use setPrecision(n) from <iomanip> header. 
+     *  
+     * ? iomanip header file : 
+     *  The <iomanip> header in C++ is part of the standard input/output library that provides parametric stream manipulators. These functions allow you to control how data is formatted and displayed on the console or read from streams without changing the underlying value. 
+     * 
+     * You must include #include<iostream> at the top of our file to use these functions, all of which reside in std namespace.   
+    * 
+    * ? Let how we set decimal precision for our double and float point  with setprecision(n)
+     */ 
+
+   cout << "double point value with precision: " << setprecision(10) << dbl_num <<endl;  // Output: double point value with precision: 225.7889 
+
+   /**
+    * ? We use fixed keyword also which display exactly four digits after the decimal 
+    *  let understand practically 
+    */
+   cout << fixed << setprecision(4) <<  dbl_num << endl;  
+
+   /**
+    * ? Difference between precision and fixed 
+    *  Manipulator         |      Purpose 
+    * - setprecision(n)   |  display 6 significant digit default 
+    *                     |
+    * - fixed             |  Changes precision to count digits after the decimal 
+    *                     |
+    * - fixed <<          |  Display exactly 4 digits after the decimal   
+    *   setprecision(n)   | 
+    * 
+    * ! Important to Understand 
+    *   - float generally provides about 6-7 decimal digits of precision. 
+    *   - double generally provides about 15-16 decimal digits of precision. 
+    *   - cout has a default precision of 6 significant digits. 
+    * 
+    * ! Both float and double use binary floating point representation. Therefore, some decimal values cannot be represented exactly in memory   
+    */
     
    /**
     * long datatype for storing integer numbers only but having bigger range than integer type 
@@ -77,7 +142,7 @@ int main()
      *  we create char myChar = 'A' -----> in program memory -----> block of memory assign to myChar variable where 'A' data is saved.
      *
      *!  Now actually data is saved in this format only or other format ??? 
-     *  As we know that computer system is machine which have circuit also so every data stored in the decimal format only it's convert decimal into binary in program memory.
+     *  As we know that computer system is machine which have circuit also so every data stored convert decimal into binary in program memory.
      * 
      *
      * todo Assignment:
