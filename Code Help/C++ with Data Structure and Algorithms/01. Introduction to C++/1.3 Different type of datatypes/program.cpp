@@ -279,7 +279,9 @@ int main()
       *    char          |    1 Byte              | Single characters 
       *   bool           |    1 Byte             |  True/ False 
       *   float          |    4 Byte             |  Decimal numbers 
-      *   double         |  8 Byte              |   Higher precision decimal numbers 
+      *   double         |  8 Byte              |   Higher precision decimal numbers  
+      * 
+      *  Memory space is dependent on computer system so it's vary to specific system. 
       */ 
 
      /**
