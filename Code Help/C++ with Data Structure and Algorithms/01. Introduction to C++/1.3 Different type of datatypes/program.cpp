@@ -179,9 +179,108 @@ int main()
       *  When we declare a variable, memory is allocated to its data-type and implementation. 
       * 
       * ? How different data-types store data 
-      *  Let understand the five fundamental data types how they store 
+      *  Let understand the five fundamental data types how they store in program memory.  
+      *  
+      *  1. Integer (int.) 
+      *    Used to store whole number without decimal value. 
+      *    
+      *     For example: 
+      *       int age = 28; 
+      *       int salary = 25000; 
+      *       int temperature = -3; 
+      * 
+      *  Typically: 
+      *   Int Datatypes takes memory size  usually 4 Byte  
+      *    4 Byte = 32 Bits  
+      *    Signed int representation of 5 decimal number in program's memory: 
       *     
-      */
+      *    00000000 00000000 00000000 00000101  = 5 decimal number   
+      *      1Byte   1Byte    1Byte    1Byte 
+      * 
+      *  A typical 32 bit signed integer has a range of: -2^31 to 2^31 - 1 
+      *   
+      *  2. Character 
+      *   Used to store a single character 
+      *   
+      *    For example:  
+      *     char grade = 'A'; 
+      *     char gender = 'M'; 
+      *     char symbol = '#';  
+      * 
+      *   Typically: 
+      *    - Memory: 1 Byte (8 bits) 
+      *    - Characters are represented using numeric encodings, commonly ASCII for basic english characters. 
+      * 
+      *  For example: 
+      *    Character:   A 
+      *    ASCII :     65 
+      *    Binary:   01000001 
+      *   
+      *  So, internally the computer stores a numeric code rather than a literal alphabet.  
+      * 
+      *  C. Boolean (bool) 
+      *     Used to represent logical values 
+      *     
+      *    For examples: 
+      *     bool isLoggedIn = true; 
+      *     bool isAdmin = false;  
+      * 
+      *   It has two logical values: 
+      *     - true or 1
+      *     - false or 0  
+      * 
+      *   Typically, a C++ bool occupies 1 byte 
+      *   Internally, it's value is represented as 1 or 0 when converted to an integer.  
+      * 
+      * D. Float (float) 
+      *   Used to store decimal number with approximately 6 - 7 significant decimal digits of precision. 
+      *   
+      *    For Example: 
+      *    float price = 99.99f here, f is float representation. 
+      *    float percentage = 85.75f here, f is float representation. 
+      *  
+      *   Memory Size: 
+      *    - float datatype usually of 4 Bytes which represent in IEEE 75 format flating point numbers 
+      *   
+      *     32 bits  
+      *     IEEE 75 Representation 
+      *     _______________________________________________________ 
+      *    | 1    |    8 bit           |    23 bit                |
+      *    |bit   |  Exponent          |   fraction               | 
+      *    | sign |                    |                         |
+      *    |______|___________________|__________________________|  
+      * 
+      *  Unlike integers, floating-point numbers use a representation involving sign, exponent, and fraction (significant) 
+      * 
+      * E. Double (double) 
+      *  Used to store decimal numbers with great precision than float. 
+      *   
+      *  For Example: 
+      *   double pi = 3,141592653589793; 
+      *   double distance = 12345.6789123; 
+      * 
+      *  Memory Size: 
+      *   - double datatype usually of 8 Byte which represent in IEEE 75 format double floating point numbers 
+      *   
+      *    64 bits 
+      *    IEEE 75 Representation 
+      * 
+      *     ________________________________________________________
+      *    | 1    |    11 bit           |    52 bit                |
+      *    |bit   |  Exponent          |   fraction                | 
+      *    | sign |                    |                          |
+      *    |______|___________________|__________________________|  
+      * 
+      *  Unlike integers, floating-point numbers use a representation involving sign, exponent, and fraction (significant) 
+      *  
+      * ? Comparison of all data types 
+      *  Data types      |       Typical memory   |   Purpose 
+      *    int           |    4 Byte              |  Whole numbers 
+      *    char          |    1 Byte              | Single characters 
+      *   bool           |    1 Byte             |  True/ False 
+      *   float          |    4 Byte             |  Decimal numbers 
+      *   double         |  8 Byte              |   Higher precision decimal numbers 
+      */ 
 
      /**
       * ? Size of datatypes in C++  
