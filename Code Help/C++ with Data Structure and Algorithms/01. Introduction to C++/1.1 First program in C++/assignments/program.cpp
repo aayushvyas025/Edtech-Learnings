@@ -71,7 +71,7 @@
      * Let explore and understand both methods in depth. 
      *  
      * 1. Using the `\n` Escape sequence (Recommended for speed) 
-     *  The `\n` character is placed  directly inside double quotes (""). It tells the compiler to move outout cursor to the next line immediately.  
+     *  The `\n` character is placed  directly inside double quotes (""). It tells the compiler to move out cursor to the next line immediately.  
      *  The escape sequence is also known as new line character also. 
      * ! escape sequence is native to c language which default added in c++ because it's extension of c language 
      */
