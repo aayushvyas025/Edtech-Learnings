@@ -20,7 +20,7 @@
       body {
         background-color: #111;
         color: #fff;
-      } 
+      }
 
       h1 {
         padding: 20px;
@@ -29,13 +29,27 @@
   </head>
   <body>
     <h1 id="topic-title"></h1>
+
+    <!-- HTML Elements for Selectors in DOM -->
+    <div>
+      <h2>Super Heroes</h2>
+      <ul>
+        <li class="dc">Superman</li>
+        <li class="dc">Flash</li>
+        <li>Aquaman</li>
+        <li id="spiderman">Peter Parker</li>
+        <li>Hulk</li>
+      </ul>
+    </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOM Content Loaded Successfully loaded'); 
-            const title = document.getElementById('topic-title'); 
-            title.textContent = 'Javascript DOM' 
-        })
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOM Content Loaded Successfully loaded");
+        const title = document.getElementById("topic-title");
+        // title.textContent = 'Javascript DOM';
+        title.textContent = "Selectors in DOM";
+      });
     </script>
-    <script src="./9.01 Introduction to DOM/program.js"></script>
+    <!-- <script src="./9.01 Introduction to DOM/program.js"></script> -->
+    <script src="./9.02 Selectors in DOM/program.js"></script>
   </body>
 </html>
