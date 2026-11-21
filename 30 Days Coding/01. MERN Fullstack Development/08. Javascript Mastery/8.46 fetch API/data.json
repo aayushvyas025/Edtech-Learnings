@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "message": "data fetch successfully",
+  "data": [
+    { "id": 0, "name": "Ironman", "brand": "Marvel" },
+    { "id": 1, "name": "Spiderman", "brand": "Marvel" },
+    { "id": 2, "name": "Batman", "brand": "DC" },
+    { "id": 3, "name": "Superman", "brand": "DC" },
+    { "id": 4, "name": "Aquaman", "brand": "DC" },
+    { "id": 5, "name": "Wolverine", "brand": "Marvel" }
+  ]
+}
