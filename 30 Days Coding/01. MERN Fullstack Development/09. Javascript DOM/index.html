@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript DOM</title>
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      body {
+        background-color: #111;
+        color: #fff;
+      } 
+
+      h1 {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="topic-title"></h1>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM Content Loaded Successfully loaded'); 
+            const title = document.getElementById('topic-title'); 
+            title.textContent = 'Javascript DOM' 
+        })
+    </script>
+    <script src="./9.01 Introduction to DOM/program.js"></script>
+  </body>
+</html>
