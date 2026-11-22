@@ -25,12 +25,19 @@
       h1 {
         padding: 20px;
       }
+
+       .divs {
+        padding: 2px;
+        background-color: #5d92e1;
+        margin: 1rem;
+        font-size: 1rem;
+       }
     </style>
   </head>
   <body>
     <h1 id="topic-title"></h1>
 
-    <!-- HTML Elements for Selectors in DOM -->
+    <!--* HTML Elements for Selectors in DOM -->
     <!-- <div>
       <h2>Super Heroes</h2>
       <ul>
@@ -41,14 +48,15 @@
         <li>Hulk</li>
       </ul>
     </div> -->
-    <!--HTML Elements for Introduction to DOM Traversal: Parents and Child Node -->
-    <div class="wrapper">
+
+    <!--* HTML Elements for Introduction to DOM Traversal: Parents and Child Node -->
+    <!-- <div class="wrapper">
       We are targeting this <span id="span-ele">span element</span> of the html
       element.
-    </div>
-    <div id="parent">
+    </div> -->
+    <!-- <div id="parent">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sit veritatis voluptatum voluptate animi id, quis excepturi! Velit, officiis recusandae?
-      <!-- This is my comment -->
+       This is my comment 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
         voluptatem.
@@ -67,6 +75,35 @@
         debitis quod.
       </p>
       <p>Ut sint, quas architecto quos repellat nam ipsum earum ex?</p>
+    </div> -->
+
+    <!--* HTML elements for siblings  -->
+    <div class="divs" id="div-one">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ea quia
+      aspernatur rerum nemo ex possimus amet, ipsam consequuntur molestiae, quod
+      obcaecati quaerat quis est dicta tempora pariatur cum quos ab molestias
+      culpa. Esse eos ipsa similique alias eligendi asperiores, reprehenderit
+      cum? Laboriosam maxime quas commodi veniam eveniet accusantium officia
+      quidem enim, odit doloribus perferendis sit asperiores velit perspiciatis
+      nostrum!
+    </div>
+    <div class="divs" id="div-two">
+      Asperiores eum quaerat reprehenderit atque ipsa fuga eligendi, recusandae
+      voluptatibus eveniet sapiente nulla exercitationem facere id, tempore
+      veritatis soluta aliquam sunt magni iste ut. Consequuntur reprehenderit
+      autem quam inventore in, accusantium quibusdam odio totam tempore alias
+      ullam non omnis quidem, molestias mollitia doloribus porro labore, neque
+      nesciunt obcaecati vitae beatae odit minus saepe. Recusandae,
+      necessitatibus provident enim iusto veritatis rerum!
+    </div>
+    <div class="divs" id="div-three">
+      Nihil fugiat voluptate quo sit itaque, qui in sint doloribus libero
+      pariatur facere rem asperiores deleniti incidunt commodi eum amet error
+      ipsum aperiam, quibusdam beatae? Voluptatum distinctio cum dolor! Ad
+      repellat esse modi rerum expedita. Labore est sapiente beatae qui mollitia
+      alias molestias necessitatibus debitis explicabo eos omnis incidunt,
+      reprehenderit dolor, porro, autem quaerat aperiam a ratione error
+      obcaecati aut?
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -79,6 +116,7 @@
     </script>
     <!-- <script src="./9.01 Introduction to DOM/program.js"></script> -->
     <!-- <script src="./9.02 Selectors in DOM/program.js"></script> -->
-    <script src="./9.03 Introduction to DOM Traversal - Parents and Child node/program.js"></script>
+    <!-- <script src="./9.03 Introduction to DOM Traversal - Parents and Child node/program.js"></script> -->
+     <script src="./9.04 Siblings in DOM/program.js"></script>
   </body>
 </html>
