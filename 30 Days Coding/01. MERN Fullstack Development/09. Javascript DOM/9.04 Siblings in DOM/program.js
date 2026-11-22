@@ -30,6 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /**
+   * ? element.nextSibling property 
+   *  - In Javascript, the read-only `previousSibling` property returns the node immediately preceding a specified node within the same parents `childNodes` list or `null` if it is the first node.  
+   */
+
+  console.log(divOne.previousSibling); 
+
+  /**
    * ? nextElementSibling property 
    *  - The `read-only` DOM property that returns the element immediately following the specified one within the same parent, or null or null if the last element. 
    */
