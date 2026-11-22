@@ -292,7 +292,7 @@ int main()
       *  
       * ? sizeof() method  
       *  - In C++ sizeof() is unary compiled time operator that returned the memory size of variable or data types in `bytes`   
-      * todo It returns an unsigned integer value of type std::size_t Understand this also !!!! 
+      * ! It returns an unsigned integer value of type std::size_t Understand this also !!!! 
       */
 
       /**
@@ -345,11 +345,6 @@ int main()
         *    Example: 1 Byte 2^(8-1) to 2^(8-1) - 1 = 2 ^ 7-1 to 2^7 -1 = -128 to 127  
         */
      
-        /**
-         * todo Assignment 
-         *  - Decimal to Binary & Binary to Decimal Number System 
-         *  - How data stored in our program memory 
-         *  - After understanding data stored in memory find how formula of range datatype is working correctly 
-         */
+
     return 0;
 }
