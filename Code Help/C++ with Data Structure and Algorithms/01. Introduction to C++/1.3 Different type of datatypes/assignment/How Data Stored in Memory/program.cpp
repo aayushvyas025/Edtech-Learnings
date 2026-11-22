@@ -138,7 +138,7 @@ int main()
    *
    *  Here, the bits are identical. Their interpretation is different.
    *
-   * ? A practical C++ example: Signed vs Unsigned
+   * ? 3.A practical C++ example: Signed vs Unsigned
    */
 
   int signedNumber = -10;
@@ -191,6 +191,146 @@ int main()
    * My recommendation: As a beginner C++ developer, use `int` for ordinary integer calculations unless you have a specific reason to use an unsigned type.  
    */
 
-   
+   /**
+    * ? 4. How understand float and double from developer perspective 
+    *  Imagine you're developing an e-commerce application 
+    *   
+    *  You need to store: 
+    */
+      int quantityProduct = 0; 
+      float quantityWeight = 5.55f; 
+
+      double productPrice = 255.7889; 
+    std::cout << "Quantity Product: " << quantityProduct << std::endl; // Output: Quantity Product: 0
+    std::cout << "Quantity Weight: " << quantityWeight << std::endl; // Output: Quantity Weight: 5.55
+    std::cout << "Product Price: " << productPrice << std::endl;  // Output: Product Price: 255.789 
+    
+    /**
+     * Why can't we use `int` for everything ? 
+     *  Because an integer can't represent fractional values:  
+     *  
+     * For example:  
+     *  int price = 255.78; 
+     * 
+     * The fraction part is discarded during conversion, leaving 255. 
+     * 
+     * That's why we need floating point data types. 
+     */
+
+    /** 
+     *  4.1 What happen when a declare float ? 
+     *    - A typical `float` occupies 4 Byte (32 bits) 
+     *   
+     */ 
+
+      float temperature = 25.6f; 
+
+      std::cout << "Temperature: " << temperature << std::endl; 
+
+      /**
+       *  But unlike an integer, a float doesn't simply stores the whole number and fractional digits as separate binary values. 
+       * 
+       *  It uses a representation like IEEE 754 Floating-point format 
+       *  For now, understand it's three components: 
+       *   
+       *  ! float memory: 32 bits 
+       *   
+       *  ______________________________________________________
+       * |       |               |                             |
+       * |  1    |     8         |         23                  |
+       * | Sign  | Exponent      |      Fraction               |
+       * |       |               |                             |
+       * |_______|_______________|_____________________________|  
+       * 
+       *   Component   |   Developer Friendly meaning 
+       *  - Sign       |  Is the number positive or number ?  
+       *  - Exponent   | How large or small is the number  
+       *  - Fraction   | What are the significant digits ? 
+       *  
+       *  Let understand with an actual number 
+       *  
+       *  Example: Store 5.5 in float            
+       */
+       float  number = 5.5f; 
+       std::cout << "Floating point number: " << number << std::endl; 
+
+       /**
+        * First computer converts 5.5 into binary: 
+        *   5.5 = 101.1   
+        *     for decimal part, we do 0.5 x 2 = 1.0 , 
+        * 
+        *  Than it converts that into normalized binary notation 
+        *    1.011 x 2^2 
+        *   
+        *  Now the computer encodes the information into three fields: 
+        *  Sign: Positive 
+        *  Exponent: 2 (with exponent bias). 
+        *  Fraction: 011 followed by zeroes 
+        *  
+        * That's how the value is represented in 32 bits 
+        * You don't need to manually perform this conversion when writing applications. 
+        * 
+        */ 
+
+        /**
+         * 4.2 What happens when we declared a double ?  
+         *  
+         */ 
+
+          double product = 225.7889 ; 
+         std::cout << "Product Price: " << product << "\n"; 
+         /**
+          * double uses the same fundamentals representation as float, but typically occupies 8 Bytes (64 bits)  
+          * 
+          *  Double memory: 64 bits 
+          * 
+          *    _____________________________________
+          *   |  1      |     11    |  52          |
+          *   |  Sign   | Exponent  | Fraction     |
+          *   |_________|___________|______________| 
+          *  
+          *   Compare: 
+          *   Property    |     float    |     double 
+          * ______________|______________|______________
+          *    Memory     |     4 Bytes  |     8 Bytes 
+          * ______________|______________|______________
+          *   Total bits  |   32 bits    |   64 bits   
+          * ______________|______________|______________ 
+          *  Precision    | 6-7 digits   | 15-16 digits
+          *  Range        |              |
+          * ______________|_____________|________________ 
+          *  range        | Smaller     | Much larger    
+          * ______________|_____________|_________________  
+          * 
+          *  Think like a developer: If double has more memory and greater precision, why would we choose float ? 
+          *   Because sometimes: 
+          *    - Memory usage matters, especially with large arrays.  
+          *    - The application doesn't need high precision.   
+          *    - The APIs or libraries we are using expect float values. 
+          * 
+          *  For general C++ calculation, 'double' is usually the better default.  
+          * 
+          */
+
+          /**
+           * ? 5. The most important real-world problem: Floating-point precision 
+           *  let's consider: 
+           */ 
+            double a = 0.1; 
+            double b = 0.2; 
+
+            std::cout << a + b << std::endl;  
+
+            // You expect: 0.3 Output but the result might be: 0.30000000000004
+
+            /**
+             * Why ? 
+             *  Because computers use binary, so decimal fractions can't be represented exactly in binary 
+             *   For example: 
+             *    0.1 in decimal  has a repeating binary representation: 0.00011001100110011....  
+             * 
+             *  But double has limited storage capacity. Therefore, the computer stores the nearest representable value. this is called floating point precision. 
+             */
+           
   return 0;
 }
