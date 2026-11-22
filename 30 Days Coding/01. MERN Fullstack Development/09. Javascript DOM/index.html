@@ -31,7 +31,7 @@
     <h1 id="topic-title"></h1>
 
     <!-- HTML Elements for Selectors in DOM -->
-    <div>
+    <!-- <div>
       <h2>Super Heroes</h2>
       <ul>
         <li class="dc">Superman</li>
@@ -40,16 +40,45 @@
         <li id="spiderman">Peter Parker</li>
         <li>Hulk</li>
       </ul>
+    </div> -->
+    <!--HTML Elements for Introduction to DOM Traversal: Parents and Child Node -->
+    <div class="wrapper">
+      We are targeting this <span id="span-ele">span element</span> of the html
+      element.
+    </div>
+    <div id="parent">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sit veritatis voluptatum voluptate animi id, quis excepturi! Velit, officiis recusandae?
+      <!-- This is my comment -->
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+        voluptatem.
+      </p>
+      <p>
+        Quaerat magnam odit iusto deleniti eaque esse quam blanditiis
+        praesentium.
+      </p>
+      <p>Repudiandae rem quos optio iure culpa quidem, numquam alias ea.</p>
+      <p>
+        Dolorem possimus temporibus laborum nesciunt beatae tempore perspiciatis
+        modi amet!
+      </p>
+      <p>
+        Voluptate veritatis dolor ipsum distinctio, adipisci iure consequatur
+        debitis quod.
+      </p>
+      <p>Ut sint, quas architecto quos repellat nam ipsum earum ex?</p>
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         console.log("DOM Content Loaded Successfully loaded");
         const title = document.getElementById("topic-title");
         // title.textContent = 'Javascript DOM';
-        title.textContent = "Selectors in DOM";
+        // title.textContent = "Selectors in DOM";
+        title.textContent = "Introduction to DOM: Parent and Child Node";
       });
     </script>
     <!-- <script src="./9.01 Introduction to DOM/program.js"></script> -->
-    <script src="./9.02 Selectors in DOM/program.js"></script>
+    <!-- <script src="./9.02 Selectors in DOM/program.js"></script> -->
+    <script src="./9.03 Introduction to DOM Traversal - Parents and Child node/program.js"></script>
   </body>
 </html>
