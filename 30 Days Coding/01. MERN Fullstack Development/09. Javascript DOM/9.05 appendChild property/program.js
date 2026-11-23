@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
    // attaching the li to cricketersList 
    cricketersList.appendChild(li); 
    
-
+  const headingLevelTwo = document.createElement('h2'); 
+  headingLevelTwo.innerText = 'Append to Screen with appendChild'; 
+  document.body.appendChild(headingLevelTwo);
+  
     
 })
