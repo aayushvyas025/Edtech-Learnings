@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript DOM</title>
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      body {
+        background-color: #111;
+        color: #fff;
+      }
+
+      h1 {
+        padding: 20px;
+      }
+
+      .divs {
+        padding: 2px;
+        background-color: #5d92e1;
+        margin: 1rem;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="topic-title"></h1>
+
+    <!--* HTML Elements for Selectors in DOM -->
+    <!-- <div>
+      <h2>Super Heroes</h2>
+      <ul>
+        <li class="dc">Superman</li>
+        <li class="dc">Flash</li>
+        <li>Aquaman</li>
+        <li id="spiderman">Peter Parker</li>
+        <li>Hulk</li>
+      </ul>
+    </div> -->
+
+    <!--* HTML Elements for Introduction to DOM Traversal: Parents and Child Node -->
+    <!-- <div class="wrapper">
+      We are targeting this <span id="span-ele">span element</span> of the html
+      element.
+    </div> -->
+    <!-- <div id="parent">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sit veritatis voluptatum voluptate animi id, quis excepturi! Velit, officiis recusandae?
+       This is my comment 
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+        voluptatem.
+      </p>
+      <p>
+        Quaerat magnam odit iusto deleniti eaque esse quam blanditiis
+        praesentium.
+      </p>
+      <p>Repudiandae rem quos optio iure culpa quidem, numquam alias ea.</p>
+      <p>
+        Dolorem possimus temporibus laborum nesciunt beatae tempore perspiciatis
+        modi amet!
+      </p>
+      <p>
+        Voluptate veritatis dolor ipsum distinctio, adipisci iure consequatur
+        debitis quod.
+      </p>
+      <p>Ut sint, quas architecto quos repellat nam ipsum earum ex?</p>
+    </div> -->
+
+    <!--* HTML elements for siblings  -->
+    <!-- <div class="divs" id="div-one">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ea quia
+      aspernatur rerum nemo ex possimus amet, ipsam consequuntur molestiae, quod
+      obcaecati quaerat quis est dicta tempora pariatur cum quos ab molestias
+      culpa. Esse eos ipsa similique alias eligendi asperiores, reprehenderit
+      cum? Laboriosam maxime quas commodi veniam eveniet accusantium officia
+      quidem enim, odit doloribus perferendis sit asperiores velit perspiciatis
+      nostrum!
+    </div>
+    <div class="divs" id="div-two">
+      Asperiores eum quaerat reprehenderit atque ipsa fuga eligendi, recusandae
+      voluptatibus eveniet sapiente nulla exercitationem facere id, tempore
+      veritatis soluta aliquam sunt magni iste ut. Consequuntur reprehenderit
+      autem quam inventore in, accusantium quibusdam odio totam tempore alias
+      ullam non omnis quidem, molestias mollitia doloribus porro labore, neque
+      nesciunt obcaecati vitae beatae odit minus saepe. Recusandae,
+      necessitatibus provident enim iusto veritatis rerum!
+    </div>
+    <div class="divs" id="div-three">
+      Nihil fugiat voluptate quo sit itaque, qui in sint doloribus libero
+      pariatur facere rem asperiores deleniti incidunt commodi eum amet error
+      ipsum aperiam, quibusdam beatae? Voluptatum distinctio cum dolor! Ad
+      repellat esse modi rerum expedita. Labore est sapiente beatae qui mollitia
+      alias molestias necessitatibus debitis explicabo eos omnis incidunt,
+      reprehenderit dolor, porro, autem quaerat aperiam a ratione error
+      obcaecati aut?
+    </div> -->
+    <!--* HTML element for appendChild property -->
+    <!-- <ul>
+    <h4>Best Batsman in the Today's Era</h4> 
+      <ul id="cricketers">
+        <li>Virat Kholi</li> 
+        <li>Rohit Sharma</li>
+        <li>Harry Brook</li> 
+        <li>Darel Mitchel</li> 
+        <li>Joe Root</li>
+        <li>Steve Smith</li> 
+
+      </ul>
+   </ul> -->
+    <!--* HTML elements for remove element  and replace element-->
+    <!-- <ul>
+      <h4>Vegetable list</h4>
+      <li id="lady-finger">Lady Finger</li>
+      <li id="potatato">Potatato</li>
+      <li id="tomatato">Tomato</li>
+      <li id="onion">Onion</li>
+      <li id="spinach">Spinach</li>
+    </ul> -->
+
+    <!--* HTML elements for parentNode -->
+    <!-- <div id="div-1" class="divs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id totam, odit aliquam harum ipsa alias perspiciatis. Voluptate numquam cupiditate culpa dolore cumque facere vero sed minima nulla, voluptas, error aliquam voluptates laborum ipsum est ratione odio laudantium tempora voluptatibus! Atque, enim? Commodi hic, quis molestias eligendi, excepturi assumenda velit tenetur aspernatur saepe architecto quam ullam odit sit voluptates recusandae deserunt odio tempore quas? Ad eveniet repudiandae ab hic, aut molestias excepturi fugit quasi illo a dolorum sapiente aspernatur beatae rerum autem odio modi, nostrum officiis minus ipsam fugiat exercitationem quae? Mollitia, sapiente quisquam, earum autem, perferendis eaque consectetur ex dicta itaque quo suscipit exercitationem architecto iusto porro nobis voluptates quos sed nesciunt possimus temporibus eos est voluptas? Eos aliquam pariatur recusandae doloribus, aspernatur vero totam veritatis harum, temporibus et ipsa. Dolorem facere modi illo praesentium quibusdam? Cum, velit voluptatibus quasi id tenetur ratione dolores non officiis sed molestiae molestias odit.</div> 
+     <div id="div-2" class="divs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quis obcaecati architecto perspiciatis praesentium culpa fuga consequatur odit, expedita error voluptates reiciendis animi numquam id dignissimos accusantium sequi sint, quos velit similique deserunt soluta unde. Debitis, sed saepe dignissimos temporibus laboriosam nostrum repellat quaerat commodi harum voluptas ex eaque doloribus aut quam unde. Distinctio voluptates nostrum aperiam vel quis recusandae cupiditate quibusdam atque dolor. Modi blanditiis quas nihil minima laboriosam praesentium voluptatem. Beatae accusamus doloremque laboriosam similique quae. Voluptas ipsam maxime in tempore pariatur ad ab dolorem consectetur laborum ut? Ad nemo impedit placeat delectus excepturi eos esse optio aut quia porro. Doloribus dolor rem repudiandae saepe assumenda perferendis sequi aperiam architecto consequuntur. Laborum numquam magni cupiditate deleniti obcaecati nostrum aut reprehenderit enim placeat voluptates eaque minima, aliquam, laudantium nesciunt! Nulla alias numquam fugit magni tempora ad nemo dolor accusamus dolorem culpa, dolorum placeat exercitationem id animi. Rerum sed repellat veritatis, at ratione officiis voluptas, consequuntur nobis dignissimos, iusto unde pariatur autem tempora molestias hic nisi eveniet excepturi ipsa explicabo id odio accusantium perferendis reiciendis ex. Dolor ad quas est sed minus quos unde eveniet, dolorem earum maxime incidunt, delectus natus autem facere rem necessitatibus, reprehenderit pariatur id consequatur ducimus.</div> -->
+
+    <!-- <ul>
+      <h4>Random Text</h4>
+      <li id="li-one">Lorem ipsum dolor sit amet.</li>
+      <li id="li-two">Saepe maxime magni dolorum quidem.</li>
+      <li id="li-three">Et corrupti eligendi omnis officia.</li>
+      <li id="li-four">Facere quos repellat commodi dignissimos?</li>
+    </ul> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOM Content Loaded Successfully loaded");
+        const title = document.getElementById("topic-title");
+        // title.textContent = 'Javascript DOM';
+        // title.textContent = "Selectors in DOM";
+        // title.textContent = "Introduction to DOM: Parent and Child Node";
+        // title.textContent = 'Siblings in DOM'
+        // title.textContent = 'Append Child in DOM';
+        // title.textContent = 'Remove Child in DOM';
+        // title.textContent = 'Replace Child in DOM Tree';
+        // title.textContent = "Parent Node Property";
+        // title.textContent = "More Siblings property of DOM";
+        // title.textContent = "First and last Element";
+        title.textContent = "Inner and Outer HTML Element";
+      });
+    </script>
+    <!-- <script src="./9.01 Introduction to DOM/program.js"></script> -->
+    <!-- <script src="./9.02 Selectors in DOM/program.js"></script> -->
+    <!-- <script src="./9.03 Introduction to DOM Traversal - Parents and Child node/program.js"></script> -->
+    <!-- <script src="./9.04 Siblings in DOM/program.js"></script> -->
+    <!-- <script src="./9.05 appendChild property/program.js"></script> -->
+    <!-- <script src="./9.96 Remove Child from DOM Tree/program.js"></script> -->
+    <!-- <script src="./9.07 Replace Child from DOM Tree/program.js"></script> -->
+    <!-- <script src="./9.08 parentNode property  of document/program.js"></script> -->
+    <!-- <script src="./9.09 More siblings property of DOM/program.js"></script> -->
+    <!-- <script src="./9.10 First and last element/program.js"></script> -->
+  </body>
+</html>
