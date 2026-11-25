@@ -78,8 +78,44 @@ int main()
     std::cout << fullName << std::endl;
 
     /**
-     * ? 3rd. cin.fail() 
-     */
+     * ? 3rd. cin.fail()  
+     * cin.fail() is important method of C++ input handling. It helps you identify whether an input operation has failed. 
+     * 
+     * Let's understand it from basics, with practical examples: 
+     * 
+     *  1. What is cin.fail( )  ? 
+     *   `cin.fail()` is a member function of std::cin utility method. 
+     * 
+     *   It checks whether the input stream has entered a failure state.  
+     *   Return Values: 
+     *     - `true`: An input operation has failed 
+     *     - `false`: No failure has occurred 
+     * 
+     *    For example: 
+     *        
+     */ 
+
+     int myAge; 
+     std::cout << "Aayush Enter your age: " << std::endl; 
+
+     std::cin >> myAge; 
+
+     // if user input other datatype than it will comes under the cin.fail() failed state 
+     if(std::cin.fail()) {
+        std::cout << "Invalid input! " << '\n';
+     }else {
+
+        std::cout << "Your Age is: " << myAge << '\n'; 
+     } 
+
+     /**
+      * What if the input comes in failed state  
+      * 
+      *  Scenario: Invalid input 
+      *    Input: "Hello"  
+      *   cin >> age;  can't convert hello to int. 
+      *   cin.fail();  true 
+      */
 
     return 0;
 }
