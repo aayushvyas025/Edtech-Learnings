@@ -102,20 +102,50 @@ int main()
 
      // if user input other datatype than it will comes under the cin.fail() failed state 
      if(std::cin.fail()) {
-        std::cout << "Invalid input! " << '\n';
+        std::cout << "Invalid input! " << '\n'; 
+
+        // cin.clear():  Removes the failure condition so the stream can accept input again.
+        std::cin.clear(); 
+     
      }else {
 
         std::cout << "Your Age is: " << myAge << '\n'; 
      } 
 
-     /**
+        // cin.ignore(): Removes unwanted characters from the input buffer.
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+
+      std::cout << "Enter your favorite superhero" << std::endl;  
+      std::string favorite_superhero; 
+      getline(std::cin, favorite_superhero); 
+     std::cout <<"Your favorite superhero: " << favorite_superhero << '\n'; 
+   
+       /**
       * What if the input comes in failed state  
       * 
       *  Scenario: Invalid input 
       *    Input: "Hello"  
       *   cin >> age;  can't convert hello to int. 
       *   cin.fail();  true 
+      * 
+      * ? When cin.fail() becomes true than where beginners usually make mistake
+      * 
+      *  What happens ? 
+      *    -> cin >> age fails 
+      *    -> cin.fail() returns true 
+      *    -> The input stream returns the failed state. 
+      *    -> Subsequent input operation non work properly or normally until you can't clear that state.  
+      * 
+      *   Even calling getline() won't solve the problem. 
+      *  ? Here we have two steps to clear the failed state and do 
+      * 
+      *   step: 1 cin.clear()
+      *   Reset the error state of input stream 
+      * 
+      *   step: 2 cin.ignore() 
+      *  Removes the unwanted characters from input buffer.  
       */
+      
 
     return 0;
 }
