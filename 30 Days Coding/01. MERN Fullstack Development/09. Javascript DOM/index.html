@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript DOM</title>
+    <link rel="stylesheet" href="./9.16 Introduction to Animations/style.css" />
     <style>
       html {
         box-sizing: border-box;
@@ -162,7 +163,13 @@
     <!-- <div id="box">This box giving styling through javascript</div> -->
 
     <!--* attributes property of dom element -->
-    <button id="btn" class="btn primary" data-item="1" disabled>Button</button>
+    <!-- <button id="btn" class="btn primary" data-item="1" disabled>Button</button> -->
+
+    <!--* animations in javascript -->
+    <div id="container">
+      <div id="inside"></div>
+    </div>
+    <button onclick="moveBox()">Roll the Box</button>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -182,7 +189,8 @@
         // title.textContent = 'innerText and textContent property of element';
         // title.textContent = "insertAdjacentElement property of element";
         // title.textContent = "Styling property of DOM element";
-        title.textContent = "Attributes property of DOM element";
+        // title.textContent = "Attributes property of DOM element";
+        title.textContent = "Introduction to Animations";
       });
     </script>
     <!-- <script src="./9.01 Introduction to DOM/program.js"></script> -->
@@ -199,6 +207,35 @@
     <!-- <script src="./9.12 innerText and textContent/program.js"></script> -->
     <!-- <script src="./9.13 insertAdjacentElement property/program.js"></script> -->
     <!-- <script src="./9.14 Styling property of element/program.js"></script> -->
-    <script src="./9.15 Attributes property of element/program.js"></script>
+    <!-- <script src="./9.15 Attributes property of element/program.js"></script> -->
+    <script>
+      // "./9.16 Introduction to Animations/program.js"
+    const container = document.getElementById("container");
+
+function moveBox() {
+  let boxPosition = 0;
+  let direction = 1;
+
+  const box = document.getElementById("inside");
+
+  const intervalId = setInterval(frame, 10);
+
+  function frame() {
+
+    boxPosition += direction;
+
+    box.style.top = `${boxPosition}px`;
+    box.style.left = `${boxPosition}px`;
+
+    if (boxPosition === 350) {
+      direction = -1;
+    }
+
+    if (boxPosition === 0 && direction === -1) {
+      clearInterval(intervalId);
+    }
+  }
+}
+    </script>
   </body>
 </html>
