@@ -182,7 +182,7 @@
       <button onclick="changeColor()">Change Color</button>
     </div> -->
     <!--* mouse events -->
-    <div class="wrapper">
+    <!-- <div class="wrapper">
       <div
         id="box"
         onmouseover="changeColorOnMOver(this)"
@@ -192,6 +192,15 @@
       ></div>
       <div class="btn-actions">
         <button onclick="changeColorOnClick()">Click On Circle</button>
+      </div>
+    </div> -->
+    <!--* event listeners --> 
+     <div class="wrapper">
+      <div
+        id="box"
+      ></div>
+      <div class="btn-actions">
+        <button id="btn">Click On Circle</button>
       </div>
     </div>
 
@@ -275,10 +284,10 @@ function moveBox() {
       }
     </script> -->
     <!--! 9.18 Mouse events of DOM element/program.js -->
-    <script>
-      /**
-       * onclick event: when click on mouse than onclock event triger by user
-       */
+    <!-- <script>
+      
+       ! onclick event: when click on mouse than onclock event triger by user
+       
       function changeColorOnClick() {
         const box = document.getElementById("box");
         if (box.style.backgroundColor === "crimson") {
@@ -287,34 +296,34 @@ function moveBox() {
           box.style.backgroundColor = "crimson";
         }
       }
-      /**
-       * mouseover event: Fires repeadetly every time the cursor moves over a child element inside the target.
-       */
+      
+       ! mouseover event: Fires repeadetly every time the cursor moves over a child element inside the target.
+       
       function changeColorOnMOver(div) {
         div.style.backgroundColor = "green";
       }
 
-      /**
-       * mouseout event: Fires only once when entering the target element itself, ignoring child boundaries.
-       */
+      
+       ! mouseout event: Fires only once when entering the target element itself, ignoring child boundaries.
+       
       function changeColorOnMOut(div) {
         div.style.backgroundColor = "orange";
       }
 
-      /**
-       * mousedown event: Triggers immediately when a button is pushed down while the pointer is on the target element. It fires on each button pressed on a physical mouse. 
-       */
+      
+       ! mousedown event: Triggers immediately when a button is pushed down while the pointer is on the target element. It fires on each button pressed on a physical mouse. 
+       
 
        function changeColorOnMDown(div) {
         div.style.backgroundColor = "teal"; 
        }
 
-       /**
-        * mouseup event: Triggers when a pressed button is released while the ponter is on the target element. It fires whenever any button is released. 
-        */
+      ! mouseup event: Triggers when a pressed button is released while the ponter is on the target element. It fires whenever any button is released. 
+       
        function changeColorOnMUp(div) {
         div.style.backgroundColor = "#E75480"
        }
-    </script>
+    </script> -->
+    <script src="./9.19 Introduction to event listeners/program.js"></script>
   </body>
 </html>
