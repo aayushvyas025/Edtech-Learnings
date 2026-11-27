@@ -78,8 +78,74 @@ int main()
     std::cout << fullName << std::endl;
 
     /**
-     * ? 3rd. cin.fail() 
-     */
+     * ? 3rd. cin.fail()  
+     * cin.fail() is important method of C++ input handling. It helps you identify whether an input operation has failed. 
+     * 
+     * Let's understand it from basics, with practical examples: 
+     * 
+     *  1. What is cin.fail( )  ? 
+     *   `cin.fail()` is a member function of std::cin utility method. 
+     * 
+     *   It checks whether the input stream has entered a failure state.  
+     *   Return Values: 
+     *     - `true`: An input operation has failed 
+     *     - `false`: No failure has occurred 
+     * 
+     *    For example: 
+     *        
+     */ 
+
+     int myAge; 
+     std::cout << "Aayush Enter your age: " << std::endl; 
+
+     std::cin >> myAge; 
+
+     // if user input other datatype than it will comes under the cin.fail() failed state 
+     if(std::cin.fail()) {
+        std::cout << "Invalid input! " << '\n'; 
+
+        // cin.clear():  Removes the failure condition so the stream can accept input again.
+        std::cin.clear(); 
+     
+     }else {
+
+        std::cout << "Your Age is: " << myAge << '\n'; 
+     } 
+
+        // cin.ignore(): Removes unwanted characters from the input buffer.
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+
+      std::cout << "Enter your favorite superhero" << std::endl;  
+      std::string favorite_superhero; 
+      getline(std::cin, favorite_superhero); 
+     std::cout <<"Your favorite superhero: " << favorite_superhero << '\n'; 
+   
+       /**
+      * What if the input comes in failed state  
+      * 
+      *  Scenario: Invalid input 
+      *    Input: "Hello"  
+      *   cin >> age;  can't convert hello to int. 
+      *   cin.fail();  true 
+      * 
+      * ? When cin.fail() becomes true than where beginners usually make mistake
+      * 
+      *  What happens ? 
+      *    -> cin >> age fails 
+      *    -> cin.fail() returns true 
+      *    -> The input stream returns the failed state. 
+      *    -> Subsequent input operation non work properly or normally until you can't clear that state.  
+      * 
+      *   Even calling getline() won't solve the problem. 
+      *  ? Here we have two steps to clear the failed state and do 
+      * 
+      *   step: 1 cin.clear()
+      *   Reset the error state of input stream 
+      * 
+      *   step: 2 cin.ignore() 
+      *  Removes the unwanted characters from input buffer.  
+      */
+      
 
     return 0;
 }
