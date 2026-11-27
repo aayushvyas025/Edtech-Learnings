@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript DOM</title>
     <!-- <link rel="stylesheet" href="./9.16 Introduction to Animations/style.css" /> -->
-    <link rel="stylesheet" href="./9.17 onClick Method/style.css" />
+    <!-- <link rel="stylesheet" href="./9.17 onClick Method/style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="./9.18 mouse events of DOM element/style.css"
+    />
     <style>
       html {
         box-sizing: border-box;
@@ -173,9 +177,22 @@
     <!-- <button onclick="moveBox()">Roll the Box</button> -->
 
     <!--* onClick method in Javascript -->
-    <div class="wrapper">
+    <!-- <div class="wrapper">
       <div class="box" id="div"></div>
       <button onclick="changeColor()">Change Color</button>
+    </div> -->
+    <!--* mouse events -->
+    <div class="wrapper">
+      <div
+        id="box"
+        onmouseover="changeColorOnMOver(this)"
+        onmouseout="changeColorOnMOut(this)"
+        onmousedown="changeColorOnMDown(this)"
+        onmouseup="changeColorOnMUp(this)"
+      ></div>
+      <div class="btn-actions">
+        <button onclick="changeColorOnClick()">Click On Circle</button>
+      </div>
     </div>
 
     <script>
@@ -198,7 +215,7 @@
         // title.textContent = "Styling property of DOM element";
         // title.textContent = "Attributes property of DOM element";
         // title.textContent = "Introduction to Animations";
-        title.textContent = "onClick Method";
+        title.textContent = "mouseOver and mouseOut method of DOM element";
       });
     </script>
     <!-- <script src="./9.01 Introduction to DOM/program.js"></script> -->
@@ -246,16 +263,58 @@ function moveBox() {
 }
     </script> -->
     <!--! 9.17 onClick Method/program.js -->
-    <script>
+    <!-- <script>
       function changeColor() {
         const box = document.getElementById("div");
-        //  Here we know something new that browser convert default hexcode into rgb
+        Here we know something new that browser convert default hexcode into rgb
         if (box.style.backgroundColor === "rgb(231, 84, 128)") {
           box.style.backgroundColor = "crimson";
         } else {
           box.style.backgroundColor = "rgb(231, 84, 128)";
         }
       }
+    </script> -->
+    <!--! 9.18 Mouse events of DOM element/program.js -->
+    <script>
+      /**
+       * onclick event: when click on mouse than onclock event triger by user
+       */
+      function changeColorOnClick() {
+        const box = document.getElementById("box");
+        if (box.style.backgroundColor === "crimson") {
+          box.style.backgroundColor = "orange";
+        } else {
+          box.style.backgroundColor = "crimson";
+        }
+      }
+      /**
+       * mouseover event: Fires repeadetly every time the cursor moves over a child element inside the target.
+       */
+      function changeColorOnMOver(div) {
+        div.style.backgroundColor = "green";
+      }
+
+      /**
+       * mouseout event: Fires only once when entering the target element itself, ignoring child boundaries.
+       */
+      function changeColorOnMOut(div) {
+        div.style.backgroundColor = "orange";
+      }
+
+      /**
+       * mousedown event: Triggers immediately when a button is pushed down while the pointer is on the target element. It fires on each button pressed on a physical mouse. 
+       */
+
+       function changeColorOnMDown(div) {
+        div.style.backgroundColor = "teal"; 
+       }
+
+       /**
+        * mouseup event: Triggers when a pressed button is released while the ponter is on the target element. It fires whenever any button is released. 
+        */
+       function changeColorOnMUp(div) {
+        div.style.backgroundColor = "#E75480"
+       }
     </script>
   </body>
 </html>
