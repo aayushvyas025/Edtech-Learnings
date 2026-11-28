@@ -42,15 +42,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // box.innerHTML = window.location.pathname  this pathname of location property give pathname
   box.textContent = window.location.hostname;
 
-  // const button = document.getElementById('reload');
-  // button.addEventListener('click', () => {
-  //     window.location.reload()
-  // })
-
+ 
   /**
    *  2. Redirecting and Reloading 
    */
 //   window.location.href = "https:www.youtube.com";  it will reload to the youtube home page 
+
+ // const button = document.getElementById('reload');
+  // button.addEventListener('click', () => {
+  //     window.location.reload() this reload our current webpage
+  // })
 
 
 });

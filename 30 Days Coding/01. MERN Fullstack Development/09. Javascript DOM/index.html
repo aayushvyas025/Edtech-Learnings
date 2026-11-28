@@ -6,10 +6,10 @@
     <title>Javascript DOM</title>
     <!-- <link rel="stylesheet" href="./9.16 Introduction to Animations/style.css" /> -->
     <!-- <link rel="stylesheet" href="./9.17 onClick Method/style.css" /> -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="./9.18 mouse events of DOM element/style.css"
-    />
+    /> -->
     <style>
       html {
         box-sizing: border-box;
@@ -205,8 +205,16 @@
     </div> --> 
 
     <!--* window location --> 
-    <div id="box"></div> 
-    <button id="reload">Click Me to Reload</button>
+    <!-- <div id="box"></div> 
+    <button id="reload">Click Me to Reload</button> -->
+
+    <!--* dialogs inbuilt methods -->
+    <dialog id="myDialog">
+      <p>Custom styled dialog content.</p> 
+      <button id="closeBtn">Close</button> 
+    </dialog> 
+    <button id="openBtn">Open Modal</button>
+
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -229,7 +237,8 @@
         // title.textContent = "Attributes property of DOM element";
         // title.textContent = "Introduction to Animations";
         // title.textContent = "mouseOver and mouseOut method of DOM element"; 
-        title.textContent = "Window location object of Browser API";
+        // title.textContent = "Window location object of Browser API"; 
+        title.textContent = "Inbuilt Dailog-Methods in Javascript"; 
       });
     </script>
     <!-- <script src="./9.01 Introduction to DOM/program.js"></script> -->
@@ -330,6 +339,7 @@ function moveBox() {
        }
     </script> -->
     <!-- <script src="./9.19 Introduction to event listeners/program.js"></script> --> 
-     <script src="./9.20 Window location object/program.js"></script>
+     <!-- <script src="./9.20 Window location object/program.js"></script> --> 
+      <script src="./9.21 Popups in Javascript/program.js"></script>
   </body>
 </html>
