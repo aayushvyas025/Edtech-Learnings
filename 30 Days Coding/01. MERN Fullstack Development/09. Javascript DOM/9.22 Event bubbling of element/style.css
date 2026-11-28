@@ -1,0 +1,11 @@
+.box {
+    padding: 40px; 
+    background-color: orange;
+    width: max-content;
+}
+
+.box span {
+    padding: 40px;
+    background-color: crimson;
+    width: max-content;
+}

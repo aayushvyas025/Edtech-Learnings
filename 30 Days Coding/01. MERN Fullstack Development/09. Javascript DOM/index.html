@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="./9.18 mouse events of DOM element/style.css"
     /> -->
+    <link rel="stylesheet" href="./9.22 Event bubbling of element/style.css">
     <style>
       html {
         box-sizing: border-box;
@@ -194,27 +195,33 @@
         <button onclick="changeColorOnClick()">Click On Circle</button>
       </div>
     </div> -->
-    <!--* event listeners --> 
-     <!-- <div class="wrapper">
+    <!--* event listeners -->
+    <!-- <div class="wrapper">
       <div
         id="box"
       ></div>
       <div class="btn-actions">
         <button id="btn">Click On Circle</button>
       </div>
-    </div> --> 
+    </div> -->
 
-    <!--* window location --> 
+    <!--* window location -->
     <!-- <div id="box"></div> 
     <button id="reload">Click Me to Reload</button> -->
 
     <!--* dialogs inbuilt methods -->
-    <dialog id="myDialog">
+    <!-- <dialog id="myDialog">
       <p>Custom styled dialog content.</p> 
       <button id="closeBtn">Close</button> 
     </dialog> 
-    <button id="openBtn">Open Modal</button>
+    <button id="openBtn">Open Modal</button> -->
 
+    <!--* Event bubbling in Javascript -->
+    <div class="box">
+      <span>
+        <button>Click Me</button>
+      </span>
+    </div>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -236,9 +243,10 @@
         // title.textContent = "Styling property of DOM element";
         // title.textContent = "Attributes property of DOM element";
         // title.textContent = "Introduction to Animations";
-        // title.textContent = "mouseOver and mouseOut method of DOM element"; 
-        // title.textContent = "Window location object of Browser API"; 
-        title.textContent = "Inbuilt Dailog-Methods in Javascript"; 
+        // title.textContent = "mouseOver and mouseOut method of DOM element";
+        // title.textContent = "Window location object of Browser API";
+        // title.textContent = "Inbuilt Dailog-Methods in Javascript";
+        title.textContent = "Event Bubbling in DOM elements";
       });
     </script>
     <!-- <script src="./9.01 Introduction to DOM/program.js"></script> -->
@@ -338,8 +346,9 @@ function moveBox() {
         div.style.backgroundColor = "#E75480"
        }
     </script> -->
-    <!-- <script src="./9.19 Introduction to event listeners/program.js"></script> --> 
-     <!-- <script src="./9.20 Window location object/program.js"></script> --> 
-      <script src="./9.21 Popups in Javascript/program.js"></script>
+    <!-- <script src="./9.19 Introduction to event listeners/program.js"></script> -->
+    <!-- <script src="./9.20 Window location object/program.js"></script> -->
+    <!-- <script src="./9.21 Popups in Javascript/program.js"></script> -->
+    <script src="./9.22 Event bubbling of element/program.js"></script>
   </body>
 </html>
